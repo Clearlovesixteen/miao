@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+      *{
+          padding: 0;
+          margin: 0;
+      }
+    header{
+        width: 100%;
+        background-color: black;
+        height: 30px;
+    }
+    .top{
+        width: 600px;
+        margin: 0 auto;
+        color: white;
+        line-height: 30px;
+    }
+    main{
+        margin: 0 auto;
+        width: 600px;
+    }
+    .prompt{
+        margin-top: 20px;
+    }
+    div{
+        width: 180px;
+        height: 40px;
+        box-sizing: border-box;
+        border: 3px solid black;
+        text-align: center;
+        line-height: 40px;
+        background-color: pink;
+        cursor: pointer;
+        margin-top: 15px;
+    }
+    div:hover{
+        background-color: red;
+    }
+    main > div:nth-child(n+6):nth-child(-n+9){
+        margin-left: 210px;
+    }
+    main > div:nth-child(n+10):nth-child(-n+13){
+        margin-left: 420px;
+    }
+    .one{
+        margin-top: -203px;
+    }
+    .two{
+        margin-top: -205px;
+    }
+    .three{
+        margin-top: 30px;
+        border-bottom: 1px dotted black;
+    }
+    .four{
+         border-bottom: 1px dotted black;
+    }
+    footer{
+        width: 100%;
+        height: 50px;
+        background-color: palevioletred;
+        margin-top: 20px;
+        text-align: center;
+    }
+    footer p{
+        line-height: 25px;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <p class="top">hello world 请调整浏览器窗口大小查看效果</p>
+    </header>
+  <main>
+      <p class="prompt">
+          页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px
+      </p>
+      <div>宽180高40(包含边框)</div>
+      <div>水平间隙30px</div>
+      <div>垂直间隙15px</div>
+      <div>边框宽度3px</div>
+      <div class="one">产品</div>
+      <div>产品</div>
+      <div>产品</div>
+      <div>产品</div>
+      <div class="two">产品</div>
+      <div>产品</div>
+      <div>产品</div>
+      <div>产品</div>
+      <p class="three">link</p>
+      <p class="four">link</p>
+      <p class="four">link</p>
+      <p class="four">link</p>
+      <p>link</p>
+  </main>
+  <footer>
+      <p>
+          ©版权所有<br>
+      本页所有布局均使用块元素
+      </p>
+  </footer>
+</body>
+</html>

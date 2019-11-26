@@ -27,31 +27,26 @@
       .a.c> span > span:first-child{
           color: green;
       }
-      .a.c > span > span:last-child{
+      .a.c span span:last-child{
           color: blue;
       }
-      
       div > a:link{
           color: pink;
       }
       div > a:visited{
           color: orange;
       }
-      div > a[href^="mailto:"]{
+      div > a[href^="mailto:" i]{
           color: blue;
       }
-      div > a[href^="MAILTO:"]{
-          color: blue;
-      }
+      
       div > a[href^="tel:"]{
           color: yellow;
       }
-      div a[href$=".pdf"]{
+      div a[href$=".pdf" i]{
           font-size: 30px;
       }
-      div a[href$=".PDF"]{
-          font-size: 30px;
-      }
+      
       div.a > ul >li:nth-child(n+4):nth-last-child(n+9){
           color: red;
       }
@@ -95,7 +90,7 @@
     <p class="a c">
       <span>
         红色
-        <span>绿色</span>
+        <span class="">绿色</span>
         <span>蓝色</span>
       </span>
     </p>
