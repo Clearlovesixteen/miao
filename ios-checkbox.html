@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+        <style type="text/css">
+            #act{
+                display: none;
+            }
+            #act + label{
+                display: inline-block;
+                width: 270px;
+                height: 155px;
+                box-sizing: border-box;
+                border: 3px solid #cbcbcb;
+                border-radius: 110px;
+                padding: 7px;
+                position: relative;
+            }
+            #act:checked + label{
+                background-color: #008000;
+                transition: 2s;
+            }
+            #act+label::before{
+                content: "";
+                display: inline-block;
+                width: 133px;
+                height: 133px;
+                box-shadow: 0 0 15px gray;
+                border-radius: 80px;
+                position: absolute;
+                background-color: white;
+                left: 0;
+            }
+            #act:checked + label::before{
+                left: 130px;
+                transition: .5s linear;
+            }
+            
+            
+            
+            
+            #one-one,#one-two,#one-three{
+                display: none;
+            }
+            label{
+                font-size: 20px;
+            }
+            #one-one + label{
+               display: inline-block;
+               width: 170px;
+               height: 50px;
+               position: relative;
+               margin-left: 70px;
+            }
+            #one-one + label::before{
+                content: " ";
+                display: block;
+                width: 40px;
+                height: 40px;
+                border: 3px solid ;
+                box-sizing: border-box;
+                position: absolute;
+                left: -55px;
+                top: -10px;
+                border-radius: 50%;
+                padding: 15px;
+            }
+            #one-one:checked + label::before{
+                padding: 7px;
+                background-color: green;
+                background-clip: content-box;
+                transition: .1s linear;
+                border: 3px solid green;
+            }
+            #one-one + label::after{
+                content: " ";
+                display: block;
+                position: absolute;
+                width: 0px;
+                height: 0px;
+                background: rgb(162,220,189);
+                border-radius: 50%;
+                position: absolute;
+                left: -36px;
+                top:9px ;
+                z-index: -1;
+            }
+            #one-one:active + label::after{
+                width: 55px;
+                height: 55px;
+                left: -62px;
+                top: -17px;
+                z-index: -1;
+                background: rgb(162,220,189);
+                transition: 1s;
+            }
+            
+            
+            #one-two + label{
+               display: inline-block;
+               width: 170px;
+               height: 50px;
+               position: relative;
+               margin-left: 70px;
+            }
+            #one-two + label::before{
+                content: " ";
+                display: block;
+                width: 40px;
+                height: 40px;
+                border: 3px solid ;
+                box-sizing: border-box;
+                position: absolute;
+                left: -55px;
+                top: -10px;
+                border-radius: 50%;
+                padding: 15px;
+            }
+            #one-two:checked + label::before{
+                padding: 7px;
+                background-color: green;
+                background-clip: content-box;
+                transition: .1s linear;
+                border: 3px solid green;
+            }
+            #one-two + label::after{
+                content: " ";
+                display: block;
+                position: absolute;
+                width: 0px;
+                height: 0px;
+                background: rgb(162,220,189);
+                border-radius: 50%;
+                position: absolute;
+                left: -36px;
+                top:9px ;
+                z-index: -1;
+            }
+            #one-two:active + label::after{
+                width: 55px;
+                height: 55px;
+                left: -62px;
+                top: -17px;
+                z-index: -1;
+                background: rgb(162,220,189);
+                transition: 1s;
+            }
+            
+            
+            #one-three + label{
+               display: inline-block;
+               width: 170px;
+               height: 50px;
+               position: relative;
+               margin-left: 70px;
+            }
+            #one-three + label::before{
+                content: " ";
+                display: block;
+                width: 40px;
+                height: 40px;
+                border: 3px solid ;
+                box-sizing: border-box;
+                position: absolute;
+                left: -55px;
+                top: -10px;
+                border-radius: 50%;
+                padding: 15px;
+            }
+            #one-three:checked + label::before{
+                padding: 7px;
+                border: 3px solid green;
+                background-color: green;
+                background-clip: content-box;
+                transition: .1s linear;
+            }
+            #one-three + label::after{
+                content: " ";
+                display: block;
+                position: absolute;
+                width: 0px;
+                height: 0px;
+                background: rgb(162,220,189);
+                border-radius: 50%;
+                position: absolute;
+                left: -36px;
+                top:9px ;
+                z-index: -1;
+            }
+            #one-three:active + label::after{
+                width: 55px;
+                height: 55px;
+                left: -62px;
+                top: -17px;
+                z-index: -1;
+                background: rgb(162,220,189);
+                transition: 1s;
+            }
+        </style>
+	</head>
+	<body>
+        <input type="checkbox" id="act"/><label for="act"></label><br>
+        <br><br><br>
+        <input type="radio" name="one" id="one-one" /><label for="one-one">Radio Button</label><br><br>
+        <input type="radio" name="one" id="one-two" /><label for="one-two">Radio Button</label><br><br>
+        <input type="radio" name="one" id="one-three" /><label for="one-three">Radio Button</label><br>
+	</body>
+</html>

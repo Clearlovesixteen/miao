@@ -8,7 +8,8 @@
                 margin: 0;
                 padding: 0;
             }
-            div{
+            /* 浮动居中 */
+            div.one{
                 width: 100%;
                 height: 200px;
                 box-sizing: border-box;
@@ -32,29 +33,48 @@
                 line-height: 50px;
                 margin:  auto;
             }
+            /* 行内元素居中 */
             main{
                 box-sizing: border-box;
                 width: 100%;
-                border: 1px solid red;
+                height: 200px;
                 background-color: blue;
                 margin-top: 10px;
+                font-size: 0px;
+                display:block;
+                text-align: center;
+                line-height: 200px;
             }
             span{
-                display: block;
+                display:inline-block;
                 width: 200px;
+                font-size: 16px;
                 height: 50px;
                 line-height: 50px;
                 border: 1px solid;
-                text-align: center;
-                margin: 30px auto;
-                border: 1px solid;
                 box-sizing: border-box;
                 background-color: #7FFFD4;
+                vertical-align: middle;
+            }
+            /* 表格居中 */
+            .table{
+                /* 因为表格布局，自身的线基线在中部 */
+                display: table-cell;
+                width: 800px;
+                height: 100px;
+                background-color: #808080;
+                vertical-align: middle;
+            }
+            .cell{
+                width: 50%;
+                height: 50px;
+                margin: auto;
+                background-color: #A52A2A;
             }
         </style>
 	</head>
 	<body>
-        <div >
+        <div class="one">
             <p>vdakgjdhajgdhjlkjh</p>
         </div>
         <main>
@@ -62,5 +82,10 @@
                 我在马路边
             </span>
         </main>
+        <div class="table">
+            <div class="cell">
+                
+            </div>
+        </div>
 	</body>
 </html>
