@@ -1,0 +1,644 @@
+大喵教育前端培训
+================
+
+## 阶段性测试 2019.12.06
+
+### 大喵教育版权所有，请勿泄漏
+
+
+
+01. 列出至少 7 个常用 Linux 命令及其基本使用方法
+     pwd:查看自己所在位置
+     cd:跳转到你要去的文件所在位置
+     cat:查看小文件
+     ls：列出目录和文件信息
+     touch:创建文件，更改文件时间
+     mkdir:创建目录
+     cp:复制文件和目录
+     mv:文件和目录改名，移动文件和目录路径
+02. 什么是 html 实体？常见 html 实体有哪些？
+     有一些字符在Html文档中有特殊的含义，如>，<要在内容中使用这些而不被解释为html,那些特殊的符号就是实体
+     空格：&nbsp  大于:&lt   小于:&gt    
+03. 计算机为什么使用二进制？
+     技术上容易实现
+     可靠性高（只有0,1 传输不会出错）
+     运算规则简单
+     与逻辑相吻合
+     二进制与十进制之间转换容易
+04. 什么是 Unicode？如何表示，有什么作用？最通用的 Unicode 实现是？
+     unicode:是计算机科学领域里的一项业界标准，包括字符集，编码方案等。
+     作用:
+     实现：UTF-8，UTF-16
+05. 什么是 GUI，什么是 CLI，什么是接口/界面？现实生活中有哪些例子？
+     GUI：图形用户界面
+     CLI：命令行界面
+     接口:两个独立的部件进行信息交换的共享边界
+     例子：装机时的配件相接
+06. 在什么情况下 html 标签可以不需要闭合？
+    只有自闭和标签才可以
+07. 在一些情况下某些非自闭合标签的结束标签可以省略的原因是什么？
+    
+08. 什么是费茨定律？它有哪些应用？
+    使用指点设备到达一个目标的时间，与当前设备位置和目标位置的距离（D）和目标大小（S）有关
+    计算机与人的交互行为
+09. 为什么英文很重要？
+    因为一些前沿的技术文档是英文的，而且好的计算机书本很多都是英文的，所看即所得，对于自我的知识增长很重要
+10. 将二进制 `10010` 数转换为十进制数
+    18
+11. 将十六进制数 `ABCDEF` 转换为十进制数
+    11259375
+12. 将十进制数 `435` 分别转换成二进制数和十六进制数
+    二：110110011
+    十六：1b3
+13. 列出 HTML 中常见的全局属性
+    
+    accesskey   规定激活元素的快捷键；
+    class    规定元素的一个或多个类名（引用样式表中的类）；
+    contenteditable   规定元素内容是否可编辑；
+    contextmenu    规定元素的上下文菜单。上下文菜单在用户点击元素时显示。
+    data-*    用于存储页面或应用程序的私有定制数据。
+    dir    规定元素中内容的文本方向。
+    draggable   规定元素是否可拖动。
+    dropzone    规定在拖动被拖动数据时是否进行复制、移动或链接。
+    hidden     样式上会导致元素不显示，但是不能用这个属性实现样式。
+    id    规定元素的唯一 id。
+    lang    规定元素内容的语言。
+    spellcheck    规定是否对元素进行拼写和语法检查。
+    style    规定元素的CSS行内元素。
+    tabindex    规定元素的tab键次序。
+    title    规定有关元素的额外信息。
+    translate   规定是否应该翻译元素内容。
+    
+14. 什么是操作系统的路径（Path）？它的作用及应用场景是？
+    
+15. 什么是文本文件？什么是二进制文件？它们最明显的区别是？
+    文本文件：是一种由若干行字符构成的计算机文件；
+    二进制文件：包含在 ASCII及扩展 ASCII 字符中编写的数据或程序指令的文件
+    区别：存储方式上的区别以及定义的区别
+16. 为什么说 html 与数学公式有诸多相似之处？
+    都有树形结构
+17. 几种常见图片格式有什么区别和特点？
+    png:无损压缩，不适合用来保存照片
+    jpg:有损压缩，质量越差，体积越小
+    gif:无损压缩，大部分做动图
+    bmp:无压缩，无损，体积巨大，不适合放在网页中
+    psd:无损压缩，有图层，保存了Photoshop在构造这张图片的过程中的所有信息
+    web:有损压缩，支持alpha通道
+18. `data-*` 属性一般是用来干嘛？
+    自定义属性，为H5新增的为前端开发者提供自定义的属性
+19. 用什么方法扩大一个 checkbox 的可点击区域？
+    display:block;
+    display:inline-block
+20. 什么是 MIME Type？
+    它使得HTTP传输的不仅是普通的文本，而变得丰富多彩
+21. 哪些标签可以使用 target 属性？哪些标签可以使用 href 属性？
+    target:a,form,iframe
+    href:a,link,area
+22. 什么是 BOM 头？
+    在utf-8编码文件中BOM在文件头部，占用三个字节，用来标示该文件属于utf-8编码
+23. group 类型的标签有哪些？
+    
+24. 什么是 SEO？
+    搜索引擎优化
+    是一种方式：利用搜索引擎的规则提高网站在有关搜索引擎内的自然排名
+25. 分别列出每种常见浏览器的内核名称（自己查）。
+    chrome:Blink
+    safari:Webkit
+    opera:Presto而后webkit,现在是Blink
+    ie:Trident
+    firefox:Gecko
+26. 列表类标签有哪些？分别如何使用？需要注意些什么？
+    ol 
+    ul
+    dl
+    ol:是有序列表，列表中的项目有特别的先后顺序
+    ul:是无序列表，没有固定的顺序，将一组相关的数据排列起来，列表之间没有先后顺序
+    dl:用于显示名称及其对应的“值”,如术语及定义，或时间及相对应的事件等等
+28. 为什么不同类型的标签的 fallback 内容要以不同的形式提供？
+    
+29. 分别写出在 head 中设定页面编码，设定 icon，引入样式表的标签
+    编码:<meta charset="utf-8">
+    设定:<link rel="shortcut icon" type="image/x-icon" href="https://s01.mifile.cn/favicon.ico"/>
+    样式表:<link rel="stylesheet" type="text/css" href="xxx.css"/>
+30. 什么叫做可访问性，html 中为此做了什么工作？
+    Web内容对于残障用户的可阅读和可理解性。提高可访问性也能让普通用户更容易理解Web内容。
+    语义化标签的出现
+31. 写出以下几个符号的 ascii 码：`a，A，0，CR，LF，空格，NBSP`。
+    a:65
+    A:20
+    0:96
+    CR:82
+     32
+     nbsp: 16
+32. 中英互翻
+    * geek 极客
+    * nerd 书呆子
+    * hacker 黑客
+    * edge 边缘
+    * bleeding/cutting edge 前沿/尖端/可能存在风险的技术
+    * HTML 实体  HTML entity
+    * coordinate 坐标
+    * polygon 多边形
+    * bit 一点
+    * byte 字节
+    * alternative 另类
+    * 属性 Attributes
+    * obsolate 过时的
+    * 二进制 Binary system
+    * 十进制 Decimal system
+    * 十六进制 Hexadecimal
+    * octal 八进制
+    * deprecate 不赞成
+    * loop 环
+    * 行 line
+    * 列 column
+    * horizontal 水平的
+    * 语义化 Semantically
+    * 可访问性 Accessibility
+
+
+33. 用文字描述如下选择器将选择哪些（个）元素
+  ```css
+  div, h1 {}
+  所有div和h1元素
+  div[class] [id="abc"] {}
+  所有div的
+  div:hover ul li > div {}
+  div在：hover的情况下，div里的ul里的li中的所有div
+  body :active {}
+  :active的情况下整个body元素
+  div:hover::after {}
+  在:hover的情况下的div里的所有::after伪元素
+  ::selection {}
+  所有元素::selection的伪元素
+  :target {}
+  所有元素在：target情况下
+  input + ul + p ~ span {}
+  input元素的后一个ul元素的兄弟元素P往后找，直到找到后面的第一个span元素
+  ```
+
+34. 分别写出如下几个选择器的优先级
+    ```css
+    * * * {}
+    （0,0,0,0,）
+    div * span {}
+    （0,0,0,2）
+    div[title] {}
+    （0,0,1,1）
+    fieldset legend + input {}
+    （0,0,0,3）
+    #some #thing .not:hover .abc:hover {}
+    （0,2,4,0）
+    ```
+
+35. `em,px,rem,vw,vh` 分别代表多长？
+   1em:相对于一个font-size的长度
+   1px:1个像素长度
+   1rem：相对于根元素设置的一个font-size
+   vw:相对于可视窗口的宽度
+   vh:相对于可视窗口的高度
+36. 显示器的物理分辨率为 `1920x1080`，操作系统设置的分辨率为 `1280x720`，网页的放大倍数为 `110%`，请计算一个 CSS 像素对应多少个显示器物理像素（面积与长度）？
+     （1920x1080）/(1280x720)*1.1^2=2.7225
+     (1920x1080)*1.1=1.65
+37. 写出如下代码显示在浏览器后**每个单词**的字号
+    ```html
+    <style>
+      html {
+        font-size: 20px;
+      }
+      section {
+        font-size: 10rem;
+      }
+      p {
+        font-size: 24px;
+      }
+      span {
+        font-size: 150%;
+      }
+      .sucks {
+        font-size: inherit;
+      }
+    </style>
+    <body>
+      <section>
+        <h2>Brown</h2>
+        <p>quick</p>
+        <p>jumps <span>over <span>lazy</span> dog</span></p>
+        <p class="sucks">sucks</p>
+      </section>
+    </body>
+    Brown:200px   quick:24px   jump:24px   over,lazy,dog:36px     sucks:24px;
+    ```
+
+38. 如何给css添加注释
+    在选择器的上方加上这段代码是做什么的注释比如:   
+    <!-- 段落的样式-->
+    p{
+        
+    }
+39. 指出如下css代码中的错误
+    ```
+    p,h1,{
+
+        background-color: rgba:(abc)
+        font-varient; abc;
+        colr: #ff048;
+        font: "serif" 25px;
+    }
+    h1后面逗号去掉，背景颜色应该是（a,b,c）,
+    font-varient:只有三个属性，small-caps,normal,inherit。所以不应该为abc，而且应该为font-variant:xxx;而不是分号.
+    font属性应该为:25px  "serif";
+    ```
+
+40. 写出如下结构中div元素的所有后代/祖先/子/父/兄弟元素
+    ```html
+    <section>
+      <h1><span></span></h1>
+      <main>
+        <h2></h2>
+        <div>
+          <ul>
+            <li><a href=""><img src="" alt=""></a></li>
+          </ul>
+        </div>
+        <aside>
+          <h3></h3>
+        </aside>
+      </main>
+    </section>
+    ```
+    后代:ul li
+    祖先:main  section
+    子:ul
+    父:main
+    兄弟:h2,aside
+
+41. 常见的替换元素有哪些？它们与非替换元素最大的区别什么？
+    替换元素:img ifarme video input object textarea  canvas
+    区别:没有后代
+42. 让 CSS 在 HTML 页面上生效有哪些方法，分别写出来。
+    外联式:<link rel="stylesheet" type="text/css" href="xxx.css"/>
+    内联式: <p style="width=xxxpx"><p>
+    页级式:<head><style type="text/css"></style></head>
+43. 如何让页面打印时应用不同的效果？
+    引入不同的CSS文件，对同一个页面进行不同的方式的布局和颜色修改
+44. 假设 index.html 的路径为 http://user.coding.me/task/index.html ，如下引用的a.css和b.css路径分别为？
+    ```html
+    <!-- index.html的内容 -->
+    <style>
+        @import "../a.css";
+    </style>
+    ```
+    ```css
+    /* a.css的内容 */
+    @import "b.css";
+    ```
+
+45. 写出满足如下条件的选择器
+    * 第  8个子结点之后，倒数第 5 个子结点之前的li结点
+    ul :nth-chlid(n+9):nth-last-chlid(n+6)
+    * 【类名】以“damiao-”开头的元素
+    <div class="damiao"></div>
+    * rel 属性中有 nofollow 这个单词的标签
+    <meta name="robots” content="nofollow” />
+46. 链接伪类的几种状态书写的顺序是什么？为什么？
+    link > visted > hover > active
+    因为打乱顺序，会造成有些效果会被覆盖而显现不出来
+47. 如下 font 属性的值哪一个是书写正确的？
+    * font: serif 24px;
+    * font: serif bold 24px/1.2;
+    * font: bold 24px/1.2 serif; 
+    第三个
+48. 详述你对盒模型的理解。
+    content-padding-border-margin
+    有border-box,padding-box, content-box
+49. 元素的高度写百分比在什么情况下【无效】，为什么？在什么情况下【有效】，有效时是以哪个元素的高度为基准值？
+    无效：父元素以及祖先元素没有高度的具体值得时候，因为那个时候是继承的，但是继承并没有具体的值和百分比进行换算
+    有效：父元素或者祖先元素有固定值时，以父元素的高度为基准进行换算
+50. 字体的 italic 与 oblique 的区别是？
+   italic是另一个专门设计好的斜体字体
+   oblique则是由字体变幻出来的斜体字体
+51. 什么是模拟信号？什么是数字信号？它们的区别是？
+   模拟信号是用一系列连续变化的电磁波或电压信号来表示
+   数字信号是用一系列断续变化的电压脉冲
+   数字信号是离散的而模拟信号是连续的
+52. 将如下 markdown 转换成 html
+    ```md
+    ## 四季变换
+
+    一年有四季，
+    四季有其对应的节气
+
+    * 春
+        - 立春
+        - 惊蛰
+        - 元宵
+    * 夏
+        - **小米**发布会
+        - 华为发布会
+    * 秋
+        - 开学了
+        - 军训了
+    * 冬
+        - 下雪了
+            + 打雪仗了
+        - 来暖气了
+        - 开空调了
+
+    > 知识就是力量，法国就是培根。
+    
+
+    [春](http://baike.baidu.com/item/%E6%98%A5/6983693)
+    ![春](https://www.google.com.hk/images/nav_logo242_hr.png)
+    ```
+    
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <title>JS Bin</title>
+    </head>
+    <body>
+    	<h1>
+    		四季变化
+    	</h1>
+    	<p>
+    		一年有四季，
+    		<br>
+    		四季有其对应的节气。
+    	</p>
+    	<ul>
+    		<li>
+    			春
+    			<ul>
+    				<li>立春</li>
+    				<li>惊蛰</li>
+    				<li>元宵</li>
+    			</ul>
+    		</li>
+    		<li>
+    			夏
+    			<ul>
+    				<li>
+    					<b>小米</b>发布会
+    				</li>
+    				<li>华为发布会</li>
+    			</ul>
+    		</li>
+    		<li>
+    			秋
+    			<ul>
+    				<li>开学了</li>
+    				<li>军训了</li>
+    			</ul>
+    		</li>
+    		<li>
+    			冬
+    			<ul>
+    				<li>
+    					下雪了
+    					<ul>
+    						<li>打雪仗了</li>
+    					</ul>
+    				</li>
+    				<li>来暖气了</li>
+    				<li>开空调了</li>
+    			</ul>
+    		</li>
+    	</ul>
+    	<q>知识就是力量，法国就是培根。</q>
+    	<p>
+    		<a href="https://baike.baidu.com/item/春/6983693">春</a>
+    		<br>
+    		<img src="https://www.google.com.hk/images/nav_logo242_hr.png" alt="春">
+    	</p>
+    </body>
+    </html>
+
+53. 如下表单提交后将跳转到什么地址
+    ```html
+    <form action="https://www.baidu.com/s" target="_blank">
+      <input type="text" value="bb" name="a">
+      <input type="checkbox" name="b" id="b" value="123" checked>
+      <input type="checkbox" name="b" id="b" value="456" checked>
+      <input type="checkbox" name="b" id="b" value="789">
+      <input type="radio" name="c" id="c" value="a2">
+      <input type="radio" name="c" id="c" value="a5" checked>
+      <input type="radio" name="c" id="c" value="a4">
+      <select name="select">
+        <option value="01">0001</option>
+        <option value="02">0002</option>
+        <option value="03" selected>0003</option>
+        <option value="04">0004</option>
+        <option value="05">0005</option>
+      </select>
+      <button>提交</button>
+    </form>
+    ```
+    https://www.baidu.com/s
+
+54. 列出 input 的 type 有哪些值，以及为各个值时分别需要怎么使用。
+    text :定义文本框
+    button :定义可点击的按钮
+    radio :定义单选按钮
+    checkobox :定义多选按钮  
+    password :定义输入文本为密码形式
+    hidden :定义隐藏输入字段
+    submit :定义提交按钮
+    reset :定义重置按钮
+    image :定义图像形式的提交按钮
+    file :定义输入字段和 "浏览"按钮，供文件上传。
+55. 想要让一个文本输入框在页面打开后自动获得光标要怎么办？
+    <input type="text" autofocus>定义autofocus属性
+56. 如何在文本框里放置提示性文字？
+    设置placeholder属性加入提示文本
+57. option 标签的主体内容太长影响用户体验，你会如何解决？
+    在:hover时显现，在没有:hover时隐藏多余的选项
+58. 想要在 textarea 标签中默认显示一段 html 代码最安全的做法是什么？
+    用html实体写标签的符号
+59. 如何禁用一组输入框？
+    设置disabled="disabled"来禁用输入框的读写
+60. 如下表格渲染出来后是什么效果？不要直接将代码贴入jsbin中看效果
+    ```html
+    <table border=1>
+      <caption>美国队长</caption>
+      <col>
+      <col bgcolor=red>
+      <col>
+      <colgroup bgcolor=pink>
+        <col>
+        <col>
+        <col bgcolor=brown>
+      </colgroup>
+      <thead>
+        <tr>
+          <th>01</th>
+          <th>02</th>
+          <th>03</th>
+          <th>04</th>
+          <th>05</th>
+          <th>06</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>abc</td>
+          <td colspan=3 rowspan=2>abc</td>
+          <td>abc</td>
+          <td>abc</td>
+        </tr>
+        <tr>
+          <td>abc</td>
+          <td colspan=2 rowspan=3>abc</td>
+        </tr>
+        <tr bgcolor=lightgreen>
+          <td colspan=2 rowspan=2>abc</td>
+          <td>abc</td>
+          <td>abc</td>
+        </tr>
+        <tr>
+          <td>abc</td>
+          <td>abc</td>
+        </tr>
+      </tbody>
+    </table>
+    ```
+
+61. 写出如下标签或属性值的英文全称
+
+    标签：html,div,p,a,em,tr,th,td,col,ul,ol,li,dl,dt,dd,pre,nav
+    
+    
+    html:HyperText Markup Language 
+    div: DIVision 
+    p: paragraph 
+    a: Anchor
+    em: Emphasized
+    tr: table row
+    th: table header cell
+    td: table data cell
+    col: column
+    ul: unordered lists
+    ol: ordered lists
+    li: list item 
+    dl: Definition List 
+    dt: Definition Term
+    dd: Definition Description 
+    pre: Preformatted
+    nav:navigation
+
+    属性：coord,rect,poly,href,src
+    
+    coord: Coordinate
+    rect: 
+    poly: polygon
+    href:Hypertext Reference
+    src: source
+
+62. 请说出你对命令行程序的理解，以及其与 GUI 程序的区别
+    理解：增加开发效率，能快速进行文档和文件的操作，
+    
+    
+    GUI
+    	用图形的方式,来显示计算机操作的界面,这样方便更直观。
+    CLI
+    	最常见的DOS命令操作。
+    	需要记忆一些常用的命令,操作不直观。
+        操作太繁琐，不太容易上手
+63. 请确认以下标签分别属性什么类别（Content Category）？
+
+    p, meta, h1, fieldset, option, input, area
+    
+    p:段落
+    meta:
+    h1:
+    fieldset:
+    option:
+    input:
+    area:
+    
+64. 解释 box-sizing 可以取哪些值，以及每个值的意义
+   content-box :设置width的大小按照内容的盒子的大小算
+   border-box :设置width大小按照边框包裹着的盒子大小算
+   inherit :继承上级值或选取默认值
+65. 简述 ie7 市场份额比 ie6 低的原因并在网络上找出目前各大浏览器在中国和全球的市场份额
+   现在国内大多数人依旧在使用Xp操作系统。而Xp操作系统本身是捆绑ie6的。虽然很多企业和个人用户在逐渐键操作系
+统或ie6更新至高版本。但是对于为数不少的对电脑和网络没有深层次了解的普通用户来说这种更新是非常缓慢的——
+盗版Xp系统以及以ie为内核的浏览器产品使这一升级过程更加缓慢。
+
+   世界：
+   chrome: 20%
+   opera:  1%
+   ie:  44%
+   safari:  5%
+   firefox:  28%
+   
+   国内:
+   chrome: 45.3%
+   opera:  未知
+   ie:  9.8%
+   safari:  2.3%
+   firefox:  2.7%
+66. 画出如下代码中 div 及其子元素的渲染结果，并指出 p 标签中【每个行内元素的，内容区，行内框的范围】，p 元素的行框，并指明理论的行框高度。有尺子的可以以 1mm 为 2px 来绘制。
+    ```html
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <title>JS Bin</title>
+      <style>
+        p {
+          font-size: 20px;
+          line-height: 120%;
+          margin: 30px;
+          margin-left: auto;
+          margin-right: -20px;
+          width: 300px;
+          background-color: tan;
+        }
+
+        .a {
+          display: inline-block;
+        }
+
+        .b {
+          font-size: 30px;
+          vertical-align: 15px;
+        }
+
+        .c {
+          display: inline-block;
+          width: 60px;
+          height: 60px;
+          background-color: pink;
+          margin: 8px;
+        }
+
+        img {
+          box-sizing: border-box;
+          width: 50px;
+          height: 50px;
+          border: 2px solid;
+          margin: 4px;
+          vertical-align: -10px;
+          margin-bottom: -5px;
+        }
+        div {
+          width: 400px;
+          border: 1px dotted;
+        }
+      </style>
+    </head>
+    <body>
+      <div>
+        <p>
+          <span class=a>foo</span>
+          <span class=b>bar</span>
+          <span class=c></span>
+          <img src="https://drscdn.500px.org/photo/205228769/m%3D1170_k%3D1/d721302d063d447aa3bd6301dc1cba87" alt="">
+        </p>
+      </div>
+    </body>
+    </html>
+    ```
