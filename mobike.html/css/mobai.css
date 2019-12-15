@@ -1,0 +1,406 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+html {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+ .global-navigation-wrap {
+  position: absolute;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+}
+ .global-navigation-wrap .container-md {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  overflow: hidden;
+}
+@media (max-width:700px) {
+    .global-navigation-wrap .container-md .nav-links{
+        display: none;
+    }
+}
+.global-navigation{
+    float: left;
+    max-width: 714px;
+    height: 80px;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+.global-navigation .mb-logo{
+    width: 100px;
+    height: 100px;
+}
+.nav-links{
+    float: right;
+    height: 80px;
+    
+}
+.nav-links li{
+    display: inline-block;
+    line-height: 80px;
+}
+.nav-links li a{
+    color: #FFF;
+    padding: .5em 20px;
+}
+.hero-landing-wrap{
+    overflow: hidden;
+}
+@media (max-width:1080px) {
+    main .hero-landing-wrap .container-center{
+        min-height: 320px;
+    }
+    main .hero-landing-wrap .font-logo{
+        font-size: 280%;
+    }
+    main .hero-landing-wrap .heading-wrap{
+        margin-top: 100px;
+    }
+    main .hero-promos-cf a{
+        width: 50%;
+    }
+}
+@media (max-width:650px) {
+    main .hero-promos-cf a{
+        float: none;
+        width: 100%;
+    }
+    .relative-of-hidden .container-three .meta-links .meta-link{
+        width: 48%;
+        padding: 20px 0;
+    }
+    .relative-of-hidden .container-three .meta-links{
+        padding: 0 0;
+    } 
+   .relative-of-hidden .container-three .meta-links :nth-child(3) .mobike-score{
+        float: left;
+    }
+    .relative-of-hidden .container-three .meta-links :nth-child(3) .mobike-score-text{
+        margin-right: 26px;
+    }
+}
+.main-girl-bgp{
+     padding-top: 80px;
+     background-repeat: no-repeat;
+     background-image: url(https://mobike.com/cn/assets/themes/moby/img/landing/hero-bg-4.jpg);
+     background-size: cover;
+     background-position:72% 72%;
+}
+.hero-landing-wrap .girl-bgp{
+    overflow: hidden;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.container-center{
+    min-height: 640px;
+    padding-top: 10vmin;
+    padding-bottom: 10vmin;/* 最小值相对于视口的百分之10 */
+    
+}
+/* 文字部分 */
+.heading-wrap{
+    max-width: 1040px;
+    height: 146px;
+    margin: 10vmin  auto 0;
+    
+}
+.font-logo{
+    font-weight: bold;
+    font-size: 420%;
+    line-height: 1;
+    color: #fff;
+    margin-bottom: 40px;
+}
+.heading-wrap .btn-hero{
+    font-size: 22px;
+    font-weight: bold;
+    padding: 14px 26px;
+    letter-spacing: .1em;
+    border-radius: 6px;
+    color: #fff;
+    box-shadow: rgba(106, 73, 60, 0.6) 0px 6px 30px 0px;
+    border-radius: 10px;
+    background-color: rgb(0,0,0,0.6);
+}
+.heading-wrap .btn-hero:hover{
+     background-color: rgb(0,0,0,0.8);
+     transition: .5s;
+}
+/* 文字下的广告 */
+.headline-news-on {
+    width: 100%;
+    background: rgba(123, 94, 81, 0.4);
+    padding: 10px;
+    z-index: 10;
+}
+.container-foc{
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.container-foc a{
+    display: block;
+    width: 100%;
+}
+.container-foc a .news{
+    display: inline-block;
+    font-size: 12px;
+    line-height: 18px;
+    padding: 0 8px;
+    border-radius: 4px;
+    background: linear-gradient(to bottom, #ec614f 0%, #ff2e2e 100%);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2);
+    color: #fff;
+}
+.container-foc a .news-letter{
+    display: inline-block;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+    color: #fff;
+}
+/* 连拍的四张图片 */
+.hero-promos-cf{
+    width: 100%;
+}
+.hero-promos-cf a{
+    display: block;
+    float: left;
+    width: 25%;
+    min-height: 260px;
+    padding: 2.4vw;
+    text-align: center;
+    border: 1px solid #fff;
+    border-top-width: 2px;
+    border-bottom: none; 
+}
+.hero-promos-cf a:nth-child(1){
+    background-color: #b2300b;
+    background-position: center center;
+    background-size: cover;
+    background-image: url(https://mobike.com/cn/assets/themes/moby/img/promo-01.jpg);
+    background-repeat: no-repeat;
+}
+.hero-promos-cf a:nth-child(2){
+    background-color: #b2300b;
+    background-position: center center;
+    background-size: cover;
+    background-image: url(https://mobike.com/cn/assets/themes/moby/img/promo-02.jpg);
+    background-repeat: no-repeat;
+}
+.hero-promos-cf a:nth-child(3){
+    background-color: #b2300b;
+    background-position: center center;
+    background-size: cover;
+    background-image: url(https://mobike.com/cn/assets/themes/moby/img/promo-03.jpg);
+    background-repeat: no-repeat;
+}
+.hero-promos-cf a:nth-child(4){
+    background-color: #b2300b;
+    background-position: center center;
+    background-size: cover;
+    background-image: url(https://mobike.com/cn/assets/themes/moby/img/promo-04.jpg);
+    background-repeat: no-repeat;
+}
+.hero-promos-cf a span{
+    display: block;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 400;
+}
+/* 底部摩拜详情 */
+.relative-of-hidden{
+    width: 100%;
+    overflow: hidden;
+}
+.container-three{
+    max-width: 1080px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding:0 20px;
+}
+.meta-links{
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 45px 0;
+    min-width: 480px;
+}
+.meta-link{
+    display: inline-block;
+    overflow: hidden;
+    width: 33%;
+    text-align: center;
+    min-width: 231px;
+}
+.icon-wechat{
+    margin-right: 10px;
+    float: left;
+    width: 50px;
+    height: 50px;
+    background-image: url(https://mobike.com/cn/assets/themes/moby/img/icon-wechat.png);
+    background-size: 50px 50px;
+}
+.wechat-text{
+    float: left;
+}
+.wechat-text h4{
+    font-weight: 400;
+    text-align: left;
+}
+.wechat-text p{
+    font-weight: 300;
+}
+/* 红包车 */
+.red-car{
+    margin-right: 10px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-image: url(https://mobike.com/cn/assets/themes/moby/img/icon-rp.png);
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    vertical-align: bottom;
+}
+.red-car-text{
+    display: inline-block;
+}
+.red-car-text h4{
+    text-align: left;
+    font-weight: 400;
+}
+.red-car-text p{
+    font-weight: 300;
+}
+/* 摩拜分数 */
+.mobike-score{
+    margin-right: 10px;
+    float: right;
+    width: 50px;
+    height: 50px;
+    background-image: url(https://mobike.com/cn/assets/themes/moby/img/icon-credit.png);
+    background-size: 50px 50px;
+}
+.mobike-score-text{
+    float: right;
+}
+.mobike-score-text h4{
+    text-align: left;
+    font-weight: 400;
+}
+.mobike-score-text p{
+    font-weight: 300;
+}
+/* 底部 */
+.flooter-warp{
+    width: 100%;
+    overflow: hidden;
+    
+}
+.footer-top-main{
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 1px solid rgb(238,238,238);
+    border-top: 1px solid rgb(238,238,238);
+}
+/* 底部的上半部 */
+.container-four{
+    max-width: 1080px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.footer-one{
+    padding-top: 45px;
+    padding-bottom: 45px;
+    overflow: hidden;
+}
+.footer-one .main-links{
+    float: left;
+    margin-right: 40px;
+    min-width: 283px;
+}
+.footer-one .main-links li{
+    line-height: 2.3;
+    font-weight: 300;
+    color: #000;
+}
+.footer-one .main-links li:nth-child(1) a{
+    background-image: url(https://mobike.com/cn/assets/themes/moby/img/logo-text.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    width: 160px;
+    height: 36px;
+    margin-bottom: 10px;
+}
+@media (max-width:760px) {
+    .footer-list-wrap{
+        float: none;
+    }
+}
+@media (max-width:700px) {
+    .flooter-warp .container-four .footer-one .footer-list-wrap > div{
+        width: 50%;
+        margin-left: 0;
+        margin-bottom: 40px;
+    }
+    .flooter-warp .container-four .footer-one .footer-list-wrap{
+        width: 100%;
+    }
+}
+/* 右边的div */
+.footer-list-wrap{
+    float: left;
+}
+.footer-list-wrap div{
+   margin-left: 8vw;
+}
+.footer-list-wrap .footer-list-products{
+    margin-left: 0;
+}
+.footer-list-wrap > div{
+    float: left;
+}
+.footer-list-wrap > div > h3{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.footer-list-wrap > div ul li{
+    line-height: 2;
+}
+.footer-list-wrap > div ul li a{
+    color: #000;
+    font-weight: 300;
+}
+.footer-list-wrap > .footer-list-life{
+    height: 131px;
+}
+/* 底部的下半部 */
+.footer-miss{
+    width: 100%;
+    overflow: hidden;
+}
+.first-mb-information{
+    display: inline-block;
+    margin-right: 40px;
+    font-size: 12px;
+    margin-top: 4px;
+    color: #aaa;
+}
+.first-mb-information i{
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+}
+.second-mb-logo{
+    float: right;
+}
