@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+        <style type="text/css">
+            @keyframes foo{
+                from{
+                    left: 0;
+                }
+                to{
+                    left: 100%;
+                }
+            }
+            *{
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                text-decoration: none;
+                box-sizing: content-box;
+                font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;;
+            }
+            body{
+                background-color: rgb(234,238,247);
+            }
+            /* 头部 */
+            header{
+                padding: 20px 30px 10px 30px;
+                margin: 0px 20px 10px 20px;
+                position: relative;
+                display: block;
+                text-align: center;
+            }
+            header h1{
+                font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+                font-size: 35px;
+                line-height: 35px;
+                position: relative;
+                font-weight: 700;
+                color: rgba(26,89,120,0.9);
+                text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+                padding: 0px 0px 5px 0px;
+                font-variant: all-small-caps;
+            }
+            header h1 span{
+                color: #7cbcd6;
+                text-shadow: 0px 1px 1px rgba(255,255,255,0.8);
+            }
+            header .codrops {
+               text-align: center;
+               display: block;
+               padding: 14px; 
+            }
+            header .codrops a{
+                display: inline-block;
+                font-size: 11px;
+                font-style: italic;
+                width: 60px;
+                height: 60px;
+                border-radius: 50px;
+                background-color: rgba(104,171,194,0.5);
+                line-height: 60px;
+                color: #fff;
+                margin: 0 10px;
+            }
+            header .codrops a:hover{
+                background-color: #4fa2c4;
+            }
+            header .codrops a:nth-child(1){
+                background-color: #fff;
+                color: #4fa2c4;
+            }
+            /* 公用主体 */
+            section{
+                width: 600px;
+                height: 400px;
+                position: relative;
+                margin: 0 auto;
+                border: 20px solid #FFF;
+                box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+            }
+            section input{
+                display: none;
+            }
+            section input:checked + label{
+                color: #68abc2 ;
+            }
+            section input:checked + label::before{
+                background-color: #fff;
+            }
+            section label{
+                width: 150px;
+                height: 30px;
+                text-align: center;
+                font-size: 20px;
+                position: relative;
+                float: left;
+                font-style: italic;
+                line-height: 32px;
+                color: #fff;
+                z-index: 1000;
+                margin-top: 350px;
+            }
+            section label::before{
+                content: " ";
+                width: 34px;
+                height: 34px;
+                border-radius: 50%;
+                position: absolute;
+                background-color: rgba(130,195,217,0.9);
+                box-shadow: 0px 0px 0px 4px rgba(104,171,194,0.6);
+                text-align: center;
+                z-index: -1;
+                margin-left: -15px;
+                left: 50%;
+            }
+            section label::after{
+                content: "";
+                width: 1px;
+                height: 400px;
+                position: absolute;
+                bottom: -20px;
+                right: 0;
+                background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+            }
+            /* 第一种动画 */
+            .main{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 600px;
+                height: 400px;
+                background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/1.jpg);
+                background-repeat: no-repeat;
+                overflow: hidden;
+            }
+            .main .small-pic{
+                width: 150px;
+                height: 400px;
+                position: relative;
+                float: left;
+                overflow: hidden;
+                z-index: 1;
+            }
+            .main > div > span{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: -150px;
+                transition: .5s ease-in-out;
+                animation: foo 1s;
+            } 
+            /* 第一页 */
+            .main > div :nth-child(1){
+                background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/1.jpg);
+                background-repeat: no-repeat;
+                background-position: 0 0;
+            }
+            .main > div:nth-child(2) :nth-child(1) {
+                background-position-x: -150px;
+            }
+            .main > div:nth-child(3) :nth-child(1) {
+                background-position-x: -300px;
+            }
+            .main > div:nth-child(4) :nth-child(1) {
+                background-position-x: -450px;
+            }
+            /* 第二页 */
+            .main > div :nth-child(2){
+                background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/2.jpg);
+                background-repeat: no-repeat;
+                background-position: 0 0;
+            }
+            .main > div:nth-child(2) :nth-child(2) {
+                background-position-x: -150px;
+            }
+            .main > div:nth-child(3) :nth-child(2) {
+                background-position-x: -300px;
+            }
+            .main > div:nth-child(4) :nth-child(2) {
+                background-position-x: -450px;
+            }
+            /* 第三页 */
+            .main > div :nth-child(3){
+                background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/3.jpg);
+                background-repeat: no-repeat;
+                background-position: 0 0;
+            }
+            .main > div:nth-child(2) :nth-child(3) {
+                background-position-x: -150px;
+            }
+            .main > div:nth-child(3) :nth-child(3) {
+                background-position-x: -300px;
+            }
+            .main > div:nth-child(4) :nth-child(3) {
+                background-position-x: -450px;
+            }
+            /* 第四页 */
+            .main > div :nth-child(4){
+                background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/4.jpg);
+                background-repeat: no-repeat;
+                background-position: 0 0;
+            }
+            .main > div:nth-child(2) :nth-child(4) {
+                background-position-x: -150px;
+            }
+            .main > div:nth-child(3) :nth-child(4) {
+                background-position-x: -300px;
+            }
+            .main > div:nth-child(4) :nth-child(4) {
+                background-position-x: -450px;
+            }
+            
+            /* 主体图 */
+            section .two:checked ~ .main{
+                background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/2.jpg);
+                transition: .8s ease-in-out;
+            }
+            section .three:checked ~ .main{
+                background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/3.jpg);
+                transition: .8s ease-in-out;
+            }
+            section .four:checked ~ .main{
+                background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/4.jpg);
+                transition: .8s ease-in-out;
+            }
+            /* 按钮 */
+            section .one:checked ~ .main  div span:nth-child(1){
+                left: 0;
+                z-index: 10;
+                animation: none;
+            }
+            section .one:checked ~ .text h3:nth-child(1){
+                opacity: 1;
+            } 
+            section .two:checked ~ .main  div :nth-child(2){
+                left: 0;
+                z-index: 10;
+                animation: none;
+            }
+            section .two:checked ~ .text h3:nth-child(2){
+                opacity: 1;
+            } 
+            section .three:checked ~ .main  div :nth-child(3){
+                left: 0;
+                z-index: 10;
+                animation: none;
+            }
+            section .three:checked ~ .text h3:nth-child(3){
+                opacity: 1;
+            } 
+            section .four:checked ~ .main  div :nth-child(4){
+                left: 0;
+                z-index: 10;
+                animation: none;
+            }
+            section .four:checked ~ .text h3:nth-child(4){
+                opacity: 1;
+            } 
+            /* 文字部分 */
+            .text{
+                width: 100%;
+                height: 100%;
+                position: relative;
+            }
+            .text h3{
+                width: 100%;
+                overflow: hidden;
+                position: absolute;
+                top: 50%;
+                z-index: 999;
+                opacity: 0;
+                transition: .8s ease-in-out;
+            }
+            .text h3 span{
+                color: #fff;
+                text-align: center;
+                display: block;
+                font-size: 70px;
+                letter-spacing: 7px;
+            }
+            .text h3 span:nth-child(2){
+                letter-spacing: 0px;
+                font-size: 14px;
+                padding: 10px;
+                background-color: rgba(104,171,194,0.9);
+            }
+        </style>
+	</head>
+	<body>
+        <header>
+            <h1>
+                Sliding Image Panels 
+                <span>WITH CSS3</span>
+            </h1>
+            <p class="codrops">
+                <a href="index1.html">Demo 1</a>
+                <a href="index2.html">Demo 2</a>
+                <a href="index3.html">Demo 3</a>
+                <a href="index4.html">Demo 4</a>
+            </p>
+        </header>
+        <section>
+        <input type="radio" id="set-one" name="one" class="one" checked>
+        <label for="set-one">1</label>
+        <input type="radio" id="set-two" name="one" class="two">
+        <label for="set-two">2</label>
+        <input type="radio" id="set-three" name="one" class="three">
+        <label for="set-three">3</label>
+        <input type="radio" id="set-four" name="one"class="four">
+        <label for="set-four">4</label>
+        <div class="main">
+            <div class="small-pic">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="small-pic">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="small-pic">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="small-pic">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="text">
+            <h3>
+                <span>Serendipity</span>
+                <span>What you've been dreaming of</span>
+            </h3>
+            <h3>
+                <span>Adventure</span>
+                <span>Where the fun begins</span>
+            </h3>
+            <h3>
+                <span>Nature</span>
+                <span>Unforgettable eperiences</span>
+            </h3>
+            <h3>
+                <span>Serenity</span>
+                <span>When silence touches nature</span>
+            </h3>
+        </div>
+        </section>
+	</body>
+</html>
