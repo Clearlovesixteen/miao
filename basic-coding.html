@@ -27,7 +27,7 @@
            var a=+prompt(" A ");
            var b=+prompt(" B ")
            var c=Math.round(a/b)
-           var d=Math.round(b/a)
+           var d=Math.ceil(b/a)
            console.log(c)
            console.log(d)
         </script>
@@ -44,12 +44,12 @@
            console.log(c)
         </script>
        <script type="x" id="ch0103/07">
+           var x=+prompt(" X ")
            var a=+prompt(" A ")
            var b=+prompt(" B ")
            var c=+prompt(" C ")
            var d=+prompt(" D ")
-           var x=+prompt(" X ")
-           var z=a*(x*x*x)+b*(x*x)+c*x+d
+           var z=(a*x**3+b*x**2+c*x+d).toFixed(7)
            console.log(z)
         </script>
         <script type="x" id="ch0103/08">
@@ -60,7 +60,7 @@
          <script type="x" id="ch0103/09">
              var pi=3.14415
              var R=+prompt(" r ")
-             var C=2*R
+             var C=(2*R).toFixed(4)
              var D=C*pi
              var E=pi*R*R
              var F=D.toFixed(4)
@@ -99,8 +99,8 @@
              <script type="x" id="ch0103/14">
                   var L=1000*20
                   var pi=3.14159
-                  var R=+prompt(" 底面半径 ")
                   var H=+prompt(" 高度 ")
+                  var R=+prompt(" 底面半径 ")
                   var W=Math.ceil(L/(pi*R*R*H))
                   console.log(W) 
                </script>
@@ -145,16 +145,10 @@
                       var W=A*B
                       console.log(W)
                   </script>
-                 <script type="x" id="ch0103/20">
-                      var A=+prompt(" a ")
-                      var B=+prompt(" b ")
-                      var W=A*B
-                      console.log(W)
-                  </script>
                   <script type="x" id="ch0103/20">
-                      var N=+prompt(" n ")
-                      var W=2**N
-                      console.log(W)
+                     var N=+prompt(" n ")
+                     var W=2**N
+                     console.log(W)
                   </script>
 	</head>
 	<body>
