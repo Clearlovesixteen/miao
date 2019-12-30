@@ -64,7 +64,7 @@
              var E=pi*R*R
              var F=D.toFixed(4)
              var G=E.toFixed(4)
-             console.log(C,F,G)
+             console.log(C+" "+F+" "+G)
           </script>
           <script type="x" id="ch0103/10">
               var R=+prompt(" r ")
@@ -195,20 +195,15 @@
        var A=+prompt("输入一个数")
        if (A >= 10 && A < 100 ) {
            console.log(1)
-       }1 else {
+       } else {
            console.log(0)
        }
     </script>
-    <script type="x" id="ch0104/07">
+    <script type="text/javascript" id="ch0104/07">
         var A=+prompt(" 幸运瓶盖数 ")
         var B=+prompt(" 鼓励瓶盖数 ")
-        if (A >= 10 ) {
+        if (A >= 10 || B >= 20 ) {
             console.log(1)
-        }else{
-            console.log(0)
-        };
-        if (B >= 20 ) {
-           console.log(1)
         }else{
             console.log(0)
         }
@@ -243,8 +238,8 @@
     </script>
     <script type="x" id="ch0104/10">
         var N=+prompt(" 输入一个数 ")
-        var A=+prompt("输入一个数")
-        if ( N >= 60 && A >=60 ) {
+        var A=+prompt(" 输入一个数 ")
+        if ( N >= 60 && A >=60 ){
             console.log("0")
         }else if(N < 60 && A >= 60){
             console.log("1")
@@ -330,18 +325,18 @@
         var A=+prompt(" 输入一个数 ")
         var B=+prompt(" 输入一个数 ")
         if(N+A > B){
-            console.log("YES");
+            console.log("yes");
         }else if(N+B > A){
-            console.log("YES");
+            console.log("yes");
         }else if(A+B > N){
-            console.log("YES");
+            console.log("yes");
         }
         if(N+A < B){
-            console.log("NO");
+            console.log("no");
         }else if(N+B < A){
-            console.log("NO");
+            console.log("no");
         }else if(A+B < N){
-            console.log("NO");
+            console.log("no");
         }
     </script>
     <script type="x" id="ch0104/17">
