@@ -587,7 +587,7 @@
             }
             console.log(Math.floor(M))
     </script>
-   <script type="x" id="ch0105/16">
+   <script type="xtext/javascript" id="ch0105/16">
         var N=+prompt(" 输入工资 ")
         var K=+prompt(" 输入增长 ")
         var B;
@@ -598,7 +598,7 @@
                 break;
             }else if(B==0){
                 console.log(M)
-            }else{
+            }else if(M>20){
                 console.log("Impossible")
             }
         }
@@ -691,7 +691,7 @@
         } 
     }
     </script>
-    <script type="x" id="ch0105/22">
+    <script type="xtext/javascript" id="ch0105/22">
         var a = b = c = d = e = 0;
         var Q = 300;
         for(var i=0; i<12; i++){
@@ -702,7 +702,7 @@
             c=(a-b)*100;
             e+=b
             if(a < 0){
-              console.log(-i);
+              console.log(-(i+1));
               break;
             }
             if(i==11){
@@ -747,10 +747,17 @@
          console.log(e)
     </script>
     <script type="x" id="ch0105/25">
-        var a=+prompt("输入一个数")
-        var b;
-        b=a.toString(7);
-        console.log(b);
+         for (var i = 100; i < 999 ; i ++) {
+            var a = i % 7
+            var b = (i - a7) / 7 % 7
+            var c = (i - a7 - b7 * 7) / 7 / 7 % 7
+            var d = i % 9
+            var e = (i - a9) / 9 % 9
+            var f = (i - a9 - b9 * 9) / 9 / 9 % 9
+            if (a == f && b == e && c == d) {
+              break;
+            }
+          }
     </script>
     <script type="x" id="ch0105/26">
          var a=+prompt("输入一个数")
@@ -783,7 +790,7 @@
             }
         }
     </script>
-    <script type="x" id="ch0105/28">
+    <script type="text/javascript" id="ch0105/28">
         var a=prompt("输入一个数")
         var b=a.length;
         var c=Number(a);
