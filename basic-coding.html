@@ -790,7 +790,7 @@
             }
         }
     </script>
-    <script type="text/javascript" id="ch0105/28">
+    <script type="xtext/javascript" id="ch0105/28">
         var a=prompt("输入一个数")
         var b=a.length;
         var c=Number(a);
@@ -943,7 +943,14 @@
          console.log(c.toFixed(2))
     </script>
     <script type="xtext/javascript" id="ch0105/37">
-        
+        var m = +prompt()
+        var n = +prompt()
+        var x = +prompt()
+          while(x >= Math.ceil(m / n) && n <= m){
+            x -= Math.ceil(m / n)
+            n += Math.floor(m / n);
+          }
+          console.log(n);
     </script>
     <script type="xtext/javascript" id="ch0105/38">
         
@@ -1065,7 +1072,7 @@
         var count
         for(var i=2; ;i++){
             isprime=true;
-            for(varj=0;j<=i/2;j++){
+            for(var j=0;j<=i/2;j++){
                 if(i%j==0){
                   isprime=false;
                   break;
