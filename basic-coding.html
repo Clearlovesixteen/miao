@@ -749,11 +749,11 @@
     <script type="x" id="ch0105/25">
          for (var i = 100; i < 999 ; i ++) {
             var a = i % 7
-            var b = (i - a7) / 7 % 7
-            var c = (i - a7 - b7 * 7) / 7 / 7 % 7
+            var b = (i - a) / 7 % 7
+            var c = (i - a - b * 7) / 7 / 7 % 7
             var d = i % 9
-            var e = (i - a9) / 9 % 9
-            var f = (i - a9 - b9 * 9) / 9 / 9 % 9
+            var e = (i - d) / 9 % 9
+            var f = (i - d - e * 9) / 9 / 9 % 9
             if (a == f && b == e && c == d) {
               break;
             }
@@ -870,20 +870,23 @@
             console.log("NO")
         }
     </script>
-    <script type="xtext/javascript" id="ch0105/31">
+    <script type="text/javascript" id="ch0105/31">
         var n=+prompt(" 输入灯的数量 ")
         var m=+prompt(" 输入人的数量 ")
+        var c="";
+        var Array=[];
         for(var i=1; i <= n ;i++){
             var g=true;
             for (var t=1;t<=m;t++){
-                if(i%p==0){
+                if(i%t==0){
                     g=!g;
                 }
             }
             if(g==false){
-                console.log(i)
+                Array.push(i)
             }
         }
+        console.log(Array)
     </script>
     <script type="xtext/javascript" id="ch0105/32">
         var a=+prompt("输入第几项")
@@ -1069,19 +1072,19 @@
     <script type="xtext/javascript" id="ch0105/44">
         var n=+prompt(" ");
         var isprime;
-        var count
+        var count=0;
         for(var i=2; ;i++){
             isprime=true;
-            for(var j=0;j<=i/2;j++){
+            for(var j=2;j<=i/2;j++){
                 if(i%j==0){
                   isprime=false;
                   break;
                 }
             }
-            if(isprime){
+             if(isprime==true){
                 count++;
                 if(count==n){
-                    console.log(x);
+                    console.log(i);
                     break;
                 }
             }
