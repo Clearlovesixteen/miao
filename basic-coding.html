@@ -1105,7 +1105,7 @@
         }
         console.log(f)
     </script>
-    <script type="xtext/javascript" id="7">
+    <script type="text/javascript" id="7">
         var n=+prompt(" 输入一个数 ");
         var b=n%10
          if(n%7==0 || b==7){
@@ -1203,7 +1203,7 @@
     </script>
     <script type="xtext/javascript" id="prime">
         var a=prompt(" 输入一个数 ");
-        var b=Math.floor(j/2);
+        var b=Math.floor(a/2);
         var isprime=true;
         for(var i=2;i<=b;i++){
             if(a%i==0){
@@ -1217,7 +1217,7 @@
         }
     </script>
     <script type="xtext/javascript" id="primes">
-        for(var j=1;j< 100;j++){
+        for(var j=2;j< 100;j++){
             var b=Math.floor(j/2);
             var isprime=true;
             for(var i=2;i<=b;i++){
@@ -1283,8 +1283,8 @@
             }
             var w= a || b;
             var o=l/w;
-            console.log(w);
             console.log(o);
+            console.log(w);
     </script>
     <script type="xtext/javascript" id="sqrt">
         var a=+prompt(" 输入一个数 ");
@@ -1296,7 +1296,7 @@
             return r;
         }
         var c = sqrt(a);
-        console.log(c);
+        console.log(c.toFixed(3));
     </script>
     <script type="text/javascript" id="weekday">
         
