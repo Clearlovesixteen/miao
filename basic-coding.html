@@ -870,7 +870,7 @@
             console.log("NO")
         }
     </script>
-    <script type="text/javascript" id="ch0105/31">
+    <script type="xtext/javascript" id="ch0105/31">
         var n=+prompt(" 输入灯的数量 ")
         var m=+prompt(" 输入人的数量 ")
         var c="";
@@ -1104,6 +1104,202 @@
             }
         }
         console.log(f)
+    </script>
+    <script type="xtext/javascript" id="7">
+        var n=+prompt(" 输入一个数 ");
+        var b=n%10
+         if(n%7==0 || b==7){
+             console.log("YES")
+         }else{
+             console.log("NO")
+         }
+    </script>
+    <script type="xtext/javascript" id="sort">
+        var a=+prompt(" 输入一个数 ");
+        var b=+prompt(" 输入一个数 ");
+        var c=+prompt(" 输入一个数 ");
+        if(a > b && b > c){
+            console.log(c,b,a)
+        }else if(a > c && c > b){
+            console.log(b,c,a)
+        }else if(b > a && a > c){
+            console.log(c,a,b)
+        }else if(b > c && c > a){
+            console.log(a,c,b)
+        }else if(c > a && a > b){
+            console.log(b,a,c)
+        }else if(c > b && b > a){
+            console.log(a,b,c)
+        }
+    </script>
+    <script type="xtext/javascript" id="narcissistic">
+        var a=+prompt(" 输入一个三位数 ");
+        b=a%10
+        c=((a-b)/10)%10
+        d=Math.floor((a-b)/100)
+        if(a==(b**3+c**3+d**3)){
+            console.log("YES")
+        }else{
+            console.log("NO")
+        }
+    </script>
+    <script type="xtext/javascript" id="narcissistics">
+        for(var i=100 ;i < 1000; i++){
+           b=i%10
+           c=((i-b)/10)%10
+           d=Math.floor((i-b)/100)
+           if(i==(b**3+c**3+d**3)){
+           console.log(i)
+          }
+        }
+    </script>
+    <script type="xtext/javascript" id="palindrom">
+        var a=prompt(" 输入一个数 ");
+        var k=a.length
+        var o=Number(a);
+        var c,b;
+        var f=0;
+        var p=Number(k)-1;
+        for(var i=1;i <=k ; i++){
+            b=o%10;
+            c=(o-b)/10;
+            o=c;
+            f+=b*(10**p)
+            p--;
+        }
+        if(f==a){
+            console.log("YES")
+        }else{
+           console.log("NO") 
+        }
+        
+    </script>
+    <script type="xtext/javascript" id="complete-number">
+        var a=prompt(" 输入一个数 ");
+        var c=0;
+        for(var i=1;i <=Math.floor(a/2); i++){
+            if(a%i==0){
+                c+=i
+            }
+        }
+        if(c==a){
+            console.log("YES")
+        }else{
+            console.log("NO")
+        }
+    </script>
+    <script type="xtext/javascript" id="complete-numbers">
+        for(var j=1;j<1000;j++){
+            var c=0;
+            for(var i=1;i <=Math.floor(j/2); i++){
+                if(j%i==0){
+                    c+=i
+                }
+            }
+            if(c==j){
+                console.log(j)
+            }
+        }
+    </script>
+    <script type="xtext/javascript" id="prime">
+        var a=prompt(" 输入一个数 ");
+        var b=Math.floor(j/2);
+        var isprime=true;
+        for(var i=2;i<=b;i++){
+            if(a%i==0){
+                isprime=false
+                console.log("NO")
+                break;
+            }
+        }
+        if(isprime==true){
+            console.log("YES")
+        }
+    </script>
+    <script type="xtext/javascript" id="primes">
+        for(var j=1;j< 100;j++){
+            var b=Math.floor(j/2);
+            var isprime=true;
+            for(var i=2;i<=b;i++){
+                if(j%i==0){
+                    isprime=false
+                    break;
+                }
+            }
+            if(isprime==true){
+                console.log(j)
+            }
+        }
+    </script>
+    <script type="xtext/javascript" id="itob">
+        var a=+prompt(" 输入一个数 ");
+        var b;
+        var c;
+        var tostr="";
+        if(a < 0){
+            c=Math.abs(a)
+            do{
+                b=c%10;
+                tostr=toCharCode(b)+tostr;
+                c=(c-b)/10;
+            }while(c>0)
+            tostr="-"+tostr;
+        }
+        if(a > 0){
+            do{
+                b=a%10;
+                tostr=toCharCode(b)+tostr;
+                a=(a-b)/10;
+            }while(a>0)
+        }
+        function toCharCode(k){
+            switch(k){
+                case 0: return "0"
+                case 1: return "1"
+                case 2: return "2"
+                case 3: return "3"
+                case 4: return "4"
+                case 5: return "5"
+                case 6: return "6"
+                case 7: return "7"
+                case 8: return "8"
+                case 9: return "9"
+            }
+        }
+        console.log(tostr)
+    </script>
+    <script type="xtext/javascript" id="lcf&lcm">
+        var a=+prompt(" 输入一个数 ");
+        var b=+prompt(" 输入一个数 ");
+            var l=a*b;
+            var d=0;
+            while(a!=0 && b!=0){
+                if(a<b){
+                    d=a;
+                    a=b;
+                    b=d;
+                }
+                a=a%b;
+            }
+            var w= a || b;
+            var o=l/w;
+            console.log(w);
+            console.log(o);
+    </script>
+    <script type="xtext/javascript" id="sqrt">
+        var a=+prompt(" 输入一个数 ");
+        function sqrt(n){
+            var r=n;
+            for(var i = 0;i<10;i++){
+                r=(r*r+n)/2/r;
+            }
+            return r;
+        }
+        var c = sqrt(a);
+        console.log(c);
+    </script>
+    <script type="text/javascript" id="weekday">
+        
     </script>
 	</head>
 	<body>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>画图</title>
+  <style>
+    canvas {
+      border: 2px solid #f0f;
+      display: block;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <canvas width="400" height="300"></canvas>
+</body>
+<script>
+  var canvas = document.querySelector('canvas')
+  canvas.style.imageRendering = 'pixelated'
+  var ctx = canvas.getContext('2d')
+
+  function dot(x, y, color = 'black') {
+    ctx.fillStyle = color
+    ctx.fillRect(x, y, 1, 1)
+  }
+  function line(x1, y1, x2, y2) {
+      ctx.strokeStyle = 'black'
+      ctx.moveTo(x1, y1)
+      ctx.lineTo(x2, y2)
+      ctx.stroke()
+    }
+  /**
+   * YOUR TASK
+画图的题：
+画一条实线
+画一条一个实点一个空点的虚线
+画一条两个实点两个空点的虚线
+画一条三个实点两个空点的虚线
+画一条45度的斜线
+画一条跨越画布左上角和右下角的对角线
+画一个空心矩形
+画一个实心矩形
+画一个rgb色彩空间的某一面
+画一个空心的圆
+画一个实心的圆
+画一个大小合适的sin(x)的图像
+   */
+</script>
+<script>
+  // YOUR CODE GOES BELOW
+  for(var x=0; x < 400;x++){
+      var y=20;
+      dot(x,y,color = 'black')
+  }
+  for(var i=0; i < 400;i++){
+      var y=50;
+      var c=i/2;
+      var d=Math.ceil(i/2)
+      if(c==d){
+         x=i
+      }
+      dot(x,y,color = 'red')
+  }
+  for(var i=0; i < 400;i++){
+      var y=80;
+     for(var c=1;c<=3;c++){
+         var x=i;
+         i++;
+        dot(x,y,color = 'green')
+     }
+     i+=2;
+  }
+  for(var i=0; i < 400;i++){
+      var y=100;
+     for(var c=1;c<=2;c++){
+         var x=i;
+         i++;
+        dot(x,y,color = 'green')
+     }
+     i+=2;
+  }
+  for(var i=0; i < 400;i++){
+      x=i;
+      y=i;
+      dot(x,y,color = 'black')
+  }
+  for(var i=0; i < 400;i++){
+      x=(4/3)*i;
+      y=i;
+      dot(x,y,color = 'brown')
+  }
+  // 空心矩形
+  for(var i=100; i <=150;i++){
+      var x;
+      var d;
+      var y=120;
+      x=i;
+      d=160
+      dot(x,y,color = 'brown')
+      dot(x,d,color = 'brown')
+  }
+  for(var i=120; i < 160;i++){
+      var x;
+      var d;
+      var x=100;
+      y=i;
+      d=150;
+      dot(x,y,color = 'brown')
+      dot(d,y,color = 'brown')
+  }
+  // 实心矩形
+  for(var i=120; i <=160;i++){
+      y=i;
+      for(var j=280;j<=330;j++){
+           x=j;
+          dot(x,y,color = 'black')
+      }
+  }
+  // 彩色矩形
+  for(var r=0; r < 256;r++){
+      for(var j=0;j<256;j++){
+          dot(r/3+170,j/3+170,'rgb'+"("+r+","+"255"+","+j+")")
+      }
+  }
+  // 圆
+  for(var y=-100;y<=100;y++){
+      var x=Math.sqrt(10000-y*y)
+      dot(x+200,y+150,"black")
+      dot(-x+200,y+150,"black")
+  }
+  for(var x=-100;x<=100;x++){
+      var y=Math.sqrt(10000-x*x)
+      dot(x+200,y+150,"black")
+      dot(x+200,-y+150,"black")
+  }
+  // 实心圆
+  for(var y=-100;y<=100;y++){
+      var x=Math.sqrt(1000-y*y)
+      dot(x+200,y+150,"black")
+      dot(-x+200,y+150,"black")
+  }
+  for(var x=-100;x<=100;x++){
+      var y=Math.sqrt(1000-x*x)
+      dot(x+200,y+150,"black")
+      dot(x+200,-y+150,"black")
+      line(x+200,y+150,x+200,-y+150)
+  }
+  // 曲线
+  for(var x=0;x<400;x++){
+      var y=100*Math.sin(x*Math.PI/100)/Math.PI;
+      dot(x,y+250,"red")
+  }
+</script>
+</html>
