@@ -57,5 +57,35 @@ var clearlovesixteen = {
             arr.push(array[i])
         }
         return arr
-    }
+    },
+    dropRigth:function(array, n = 1){
+        var len = array.length;
+        var arr = []
+        if(n >= len ){
+            return arr
+        }
+        for(var i = 0 ; i < len - n ; i++){
+            arr.push(array[i])
+        }
+        return arr
+    },
+     fill:function(array , value , start = 0 , end = array.length){
+         var len = array.length ;
+         var arr = [] ;
+         for(var i = 0 ; i < len ; i++){
+             if(i >= start && i < end ){
+                 arr.push(value)
+             }else{
+                 arr.push(array[i])
+             }
+         }
+         return arr
+     },
+     head:function(array){
+         if(array.length == 0){
+             return undefined
+         }else{
+             return array[0]
+         }
+     }
 }
