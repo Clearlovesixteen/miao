@@ -150,11 +150,15 @@ var clearlovesixteen = {
      },
      join:function(array , separator = ','){
          var len = array.length ;
-         var str = array[0]
+         var str = array[0] + ''
          for(var i = 1 ; i < len ; i++){
              str+=separator
              str+=array[i]
          }
          return str
-     }
+     },
+     last:function(array){
+         return array[array.length-1]
+     },
+     
 }
