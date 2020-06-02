@@ -1,5 +1,5 @@
 var clearlovesixteen = {
-    .chunk:function ( array ,  size ){
+    chunk:function ( array ,  size ){
         var len = array.length;
         var arr = [] ;
         var arr1 = [] ;
@@ -17,17 +17,17 @@ var clearlovesixteen = {
         return arr
     },
     
-    .compact:function (){
+    compact:function (){
         
     },
     
-    .compact:function (){
+    compact:function (){
         
     },
-    .compact:function (){
+    compact:function (){
         
     },
-    .compact:function (){
+    compact:function (){
         
     },
     
