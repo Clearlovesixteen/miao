@@ -48,5 +48,18 @@ var clearlovesixteen = {
         }
         return arr
     },
-    
+    drop:function(array , n ){
+        var len = array.length ;
+        var arr = []
+        if(n >= len ){
+            return arr
+        }else{
+            for(var i = 0 ; i < len ; i++){
+                if(i >= n ){
+                    arr.push(array[i])
+                }
+            }
+        }
+        return arr
+    }
 }
