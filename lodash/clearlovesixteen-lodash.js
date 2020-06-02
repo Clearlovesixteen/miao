@@ -186,14 +186,14 @@ var clearlovesixteen = {
          }
      },
      pull:function(array , values){
-        var arr = []
-        var len = array.length ;
-        for(var i = 0 ; i < len ; i++){
-            if( values.includes(array[i])  == false){
-                arr.push(array[i])
-            }
-        }
-     return arr
+         for(var keys of values){
+             for(var i = 0 ; i < array.length ; i++){
+                 if(array[i] == keys){
+                     array.splice(i,1)
+                 }
+             }
+         }
+         return array
      },
      pullAll:function(){
          
