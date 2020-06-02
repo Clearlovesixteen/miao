@@ -163,13 +163,13 @@ var clearlovesixteen = {
      lastIndexOf:function(array , value , formIndex ){
          var len = array.length
          if( isNaN(value) ){
-             for(var i = fromIndex ;  i >= 0 ; i--){
+             for(var i = formIndex ;  i >= 0 ; i--){
                  if( isNaN( array[i] )){
                      return i
                  } 
              }
          }else{
-              for(var i = fromIndex ; i >= 0 ; i--){
+              for(var i = formIndex ; i >= 0 ; i--){
                   if( array[i]  == value){
                       return i
                   }
@@ -187,18 +187,11 @@ var clearlovesixteen = {
      },
      pull:function(array , values){
         var arr = []
-        var map = {}
         var len = array.length ;
-        for(var i = 0 ; i < values.length ; i++){
-            map[values[i]] = 1
-        }
-        for(var j = 0 ; j < len ; j++){
-            if(array[j] in map){
-                continue;
-            }else{
-                arr.push(array[j])
+        for(var i = 0 ; i < len ; i++){
+            if( values.includes(array[i])  == false){
+                arr.push(array[i])
             }
-        }
-        return arr
      }
+     return arr
 }
