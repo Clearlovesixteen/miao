@@ -160,7 +160,7 @@ var clearlovesixteen = {
      last:function(array){
          return array[array.length-1]
      },
-     lastIndexOf:function(array , value , formIndex = arrat.length-1){
+     lastIndexOf:function(array , value , formIndex = array.length - 1){
          var len = array.length
          if( isNaN(value) ){
              for(var i = fromIndex ;  i >= 0 ; i--){
@@ -176,5 +176,13 @@ var clearlovesixteen = {
               }
           }
           return -1
+     },
+     nth:function(array , n = 0){
+        n = Math.abs(n)
+        for( var i = 0 ; i < array.length ; i++){
+            if(i == n){
+                return array[i]
+            }
+         }
      }
 }
