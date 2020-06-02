@@ -126,7 +126,7 @@ var clearlovesixteen = {
      initial:function(array){
          return array.slice(0,array.length-1)
      },
-     intersection:function(arrays){
+     intersection:function(...arrays){
          var map = {}
          var arr = []
          var len = arrays.length;
@@ -147,5 +147,8 @@ var clearlovesixteen = {
              }
          }
          return arr
+     },
+     join:function(){
+         
      }
 }
