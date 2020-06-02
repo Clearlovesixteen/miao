@@ -16,15 +16,43 @@ var clearlovesixteen = {
         return arr
     },
     
-    compact:function (){
-        
+    compact:function (array){
+        var len = array.length ;
+        var arr =  []
+        for(var i = 0 ; i < len ; i++){
+            if(Boolean( array[i] ) !== false){
+                arr.push(array[i])
+            }
+        }
+        return arr
     },
     
-    compact:function (){
+    concat:function ( array , [values] ) {
         
     },
-    compact:function (){
-        
+    difference:function ( array , array1 ){
+        var arr = []
+        var map = {}
+        for(var i = 0 ; i < array.length ; i++){
+            if( array[i] in map){
+                map[ array[i] ]++
+            }else{
+                map[ array[i] ] = 1
+            }
+        }
+        for(var j = 0 ; i < array1.length ; j++){
+            if( array1[j] in map){
+                map[ array1[j] ]++
+            }else{
+                map[ array1[j] ] = 1
+            }
+        }
+        for(var keys in map){
+            if(map[keys] == 1){
+                arr.push( Number(keys) )
+            }
+        }
+        return arr
     },
     compact:function (){
         
