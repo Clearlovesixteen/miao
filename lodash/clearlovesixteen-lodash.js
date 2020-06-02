@@ -81,11 +81,31 @@ var clearlovesixteen = {
          }
          return arr
      },
+     flatten:function(array){
+         var len = array.length ; 
+         var arr = []
+         for(var i = 0 ; i < len ; i++){
+             if(array[i] instanceof Array){
+                 for(var j of array[i]){
+                     arr.push(j)
+                 }
+             }else{
+                 arr.push( array[i] )
+             }
+             return arr
+         }
+     }
      head:function(array){
          if(array.length == 0){
              return undefined
          }else{
              return array[0]
          }
+     },
+     flattenDeep:function(array){
+         return array.flat(Infinity)
+     },
+     flattenDepth:function(array , depth = 1){
+         return array.flat(depth)
      }
 }
