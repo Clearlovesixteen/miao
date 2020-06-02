@@ -1,4 +1,4 @@
-var clearlovesixteen = {
+var oo = {
     .chunk:function ( array ,  size ){
         var len = array.length;
         var arr = [] ;
