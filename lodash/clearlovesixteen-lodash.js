@@ -110,7 +110,7 @@ var clearlovesixteen = {
         var len = array.length
         if( isNaN(value) ){
             for(var i = fromIndex ;  i < len ; i++){
-                if(isNaN( array[i] ){
+                if( isNaN( array[i] )){
                     return i
                 } 
             }
@@ -125,5 +125,9 @@ var clearlovesixteen = {
      },
      initial:function(array){
          return array.slice(0,array.length-1)
+     },
+     intersection:function (){
+         var map = {}
+         
      }
 }
