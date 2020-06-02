@@ -185,7 +185,7 @@ var clearlovesixteen = {
             }
          }
      },
-     pull:function(array , values){
+     pull:function(array , ...values){
          for(var keys of values){
              for(var i = 0 ; i < array.length ; i++){
                  if(array[i] == keys){
@@ -195,7 +195,13 @@ var clearlovesixteen = {
          }
          return array
      },
-     pullAll:function(){
-         
+     pullAll:function(array , values){
+         var arr = []
+         for(var i = 0 ; i < array.length ; i++){
+             if( values.includes(array[i]) == false){
+                 arr.push(array[i])
+             }
+         }
+         return arr
      }
 }
