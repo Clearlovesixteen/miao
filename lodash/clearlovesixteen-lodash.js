@@ -148,7 +148,13 @@ var clearlovesixteen = {
          }
          return arr
      },
-     join:function(){
-         
+     join:function(array , separator = ','){
+         var len = array.length ;
+         var str = array[0]
+         for(var i = 1 ; i < len ; i++){
+             str+=separator
+             str+=array[i]
+         }
+         return str
      }
 }
