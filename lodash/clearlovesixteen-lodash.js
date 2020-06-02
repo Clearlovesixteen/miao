@@ -40,7 +40,7 @@ var clearlovesixteen = {
                 map[ array[i] ] = 1
             }
         }
-        for(var j = 0 ; i < array1.length ; j++){
+        for(var j = 0 ; j < array1.length ; j++){
             if( array1[j] in map){
                 map[ array1[j] ]++
             }else{
@@ -53,9 +53,6 @@ var clearlovesixteen = {
             }
         }
         return arr
-    },
-    compact:function (){
-        
     },
     
 }
