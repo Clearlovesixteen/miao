@@ -17,5 +17,18 @@ var clearlovesixteen = {
         return arr
     },
     
+    .compact:function (){
+        
+    },
+    
+    .compact:function (){
+        
+    },
+    .compact:function (){
+        
+    },
+    .compact:function (){
+        
+    },
     
 }
