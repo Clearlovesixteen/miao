@@ -5,7 +5,7 @@ var clearlovesixteen = {
         var arr1 = [] ;
         var count = 0 ;
         for(var i = 0  ; i < len ; i++){
-            if(count == size){
+            if(count == size || i == len-1){
                 arr.push(arr1)
                 count = 0;
                 arr1 = []
