@@ -15,7 +15,6 @@ var clearlovesixteen = {
         }
         return arr
     },
-    
     compact:function (array){
         var len = array.length ;
         var arr =  []
@@ -26,7 +25,6 @@ var clearlovesixteen = {
         }
         return arr
     },
-    
     concat:function ( array , [values] ) {
         
     },
@@ -69,7 +67,7 @@ var clearlovesixteen = {
         }
         return arr
     },
-     fill:function(array , value , start = 0 , end = array.length){
+    fill:function(array , value , start = 0 , end = array.length){
          var len = array.length ;
          var arr = [] ;
          for(var i = 0 ; i < len ; i++){
@@ -94,7 +92,7 @@ var clearlovesixteen = {
              }
              return arr
          }
-     }
+     },
      head:function(array){
          if(array.length == 0){
              return undefined
@@ -107,5 +105,8 @@ var clearlovesixteen = {
      },
      flattenDepth:function(array , depth = 1){
          return array.flat(depth)
+     },
+     frompairs:function(pairs){
+         
      }
 }
