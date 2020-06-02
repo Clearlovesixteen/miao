@@ -30,15 +30,17 @@ var clearlovesixteen = {
     concat:function ( array , [values] ) {
         
     },
-    difference:function ( array , values ){
+    difference:function ( array , ...values ){
         var arr = []
         var map = {}
         for(var i = 0 ; i < array.length ; i++){
             map[array[i]] = true
         }
-        for(var j = 0 ; j < values.length ; j++){
-            if( values[j] in map){
-                map[values[j]] = false
+        for(var j  in values){
+            for(var k in values[j]){
+                if(map[ values[j][k] ]){
+                    map[ values[j][k] ] = false
+                }
             }
         }
         for(var keys in map){
@@ -48,17 +50,11 @@ var clearlovesixteen = {
         }
         return arr
     },
-    drop:function(array , n ){
+    drop:function(array , n = 1 ){
         var len = array.length ;
         var arr = []
-        if(n >= len ){
-            return arr
-        }else{
-            for(var i = 0 ; i < len ; i++){
-                if(i >= n ){
-                    arr.push(array[i])
-                }
-            }
+        for(var i = n ; i < len ; i++){
+            arr.push(array[i])
         }
         return arr
     }
