@@ -106,7 +106,38 @@ var clearlovesixteen = {
      flattenDepth:function(array , depth = 1){
          return array.flat(depth)
      },
-     frompairs:function(pairs){
-         
+     indexOf:function(array , value , fromIndex = 0){
+         var map = {}
+         var len = array.length ;
+         if(fromIndex > 0){
+             for(var i = 0 ; i < len ; i++){
+                 if(array[i] in map){
+                     map[ array[i] ] ++
+                     if( map[value] == fromIndex){
+                         return i
+                     }
+                 }else{
+                     map[ array[i] ] = 1
+                 }
+             }
+         }else if(fromIndex < 0){
+             for(var i = len-1 ; i >= 0 ; i--){
+                 if(array[i] in map){
+                     map[ array[i] ] ++
+                     if( map[value] == fromIndex){
+                         return i
+                     }
+                 }else{
+                     map[ array[i] ] = 1
+                 }
+             }
+         }else{
+             for(var i = 0 ; i < len ; i++){
+                 if( array[i]  == value){
+                     return i
+                 }
+             }
+         }
+         return -1
      }
 }
