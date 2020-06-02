@@ -107,32 +107,15 @@ var clearlovesixteen = {
          return array.flat(depth)
      },
      indexOf:function(array , value , fromIndex = 0){
-         var map = {}
-         var len = array.length ;
-         if(fromIndex > 0){
-             for(var i = 0 ; i < len ; i++){
-                 if(array[i] in map){
-                     map[ array[i] ] ++
-                     if( map[value] == fromIndex){
-                         return i
-                     }
-                 }else{
-                     map[ array[i] ] = 1
-                 }
-             }
-         }else if(fromIndex < 0){
-             for(var i = len-1 ; i >= 0 ; i--){
-                 if(array[i] in map){
-                     map[ array[i] ] ++
-                     if( map[value] == fromIndex){
-                         return i
-                     }
-                 }else{
-                     map[ array[i] ] = 1
-                 }
-             }
-         }else{
-             for(var i = 0 ; i < len ; i++){
+        var len = array.length
+        if( isNaN(value) ){
+            for(var i = fromIndex ;  i < len ; i++){
+                if(isNaN( array(i) ) ){
+                    return i
+                } 
+            }
+        }else{
+             for(var i = fromIndex ; i < len ; i++){
                  if( array[i]  == value){
                      return i
                  }
@@ -141,6 +124,6 @@ var clearlovesixteen = {
          return -1
      },
      initial:function(array){
-         return array.slice(1,array.length)
+         return array.slice(0,array.length-1)
      }
 }
