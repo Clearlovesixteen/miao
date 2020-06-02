@@ -192,6 +192,7 @@ var clearlovesixteen = {
             if( values.includes(array[i])  == false){
                 arr.push(array[i])
             }
-     }
+        }
      return arr
+     }
 }
