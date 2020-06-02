@@ -139,5 +139,8 @@ var clearlovesixteen = {
              }
          }
          return -1
+     },
+     initial:function(array){
+         return array.slice(1,array.length)
      }
 }
