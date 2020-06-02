@@ -1,5 +1,0 @@
-var Clearlovesixteen = {
-    .chunk:function (){
-        
-    }
-}
