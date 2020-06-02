@@ -30,25 +30,19 @@ var clearlovesixteen = {
     concat:function ( array , [values] ) {
         
     },
-    difference:function ( array , array1 ){
+    difference:function ( array , values ){
         var arr = []
         var map = {}
         for(var i = 0 ; i < array.length ; i++){
-            if( array[i] in map){
-                map[ array[i] ]++
-            }else{
-                map[ array[i] ] = 1
-            }
+            map[array[i]] = true
         }
-        for(var j = 0 ; j < array1.length ; j++){
-            if( array1[j] in map){
-                map[ array1[j] ]++
-            }else{
-                map[ array1[j] ] = 1
+        for(var j = 0 ; j < values.length ; j++){
+            if( values[j] in map){
+                map[values[j]] = false
             }
         }
         for(var keys in map){
-            if(map[keys] == 1){
+            if(map[keys]){
                 arr.push( Number(keys) )
             }
         }
