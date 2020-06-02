@@ -110,7 +110,7 @@ var clearlovesixteen = {
         var len = array.length
         if( isNaN(value) ){
             for(var i = fromIndex ;  i < len ; i++){
-                if(isNaN( array(i) ) ){
+                if(isNaN( array[i] ){
                     return i
                 } 
             }
