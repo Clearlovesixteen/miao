@@ -90,8 +90,8 @@ var clearlovesixteen = {
              }else{
                  arr.push( array[i] )
              }
-             return arr
          }
+         return arr
      },
      head:function(array){
          if(array.length == 0){
