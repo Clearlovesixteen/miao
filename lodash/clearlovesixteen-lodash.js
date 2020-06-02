@@ -126,8 +126,26 @@ var clearlovesixteen = {
      initial:function(array){
          return array.slice(0,array.length-1)
      },
-     intersection:function (){
+     intersection:function(arrays){
          var map = {}
-         
+         var arr = []
+         var len = arrays.length;
+         var len1 = arrays[0].length;
+         for(var i = 0 ; i < len1 ; i++){
+             map[ arrays[0][i] ] = true
+         }
+         for(var j = 0 ; j < len ; j++){
+             for(var keys in map){
+                 if( arrays[j].includes( Number(keys) ) == false){
+                     map[keys] = false
+                 }
+             }
+         }
+         for(var key in map){
+             if(map[key]){
+                 arr.push(Number(key))
+             }
+         }
+         return arr
      }
 }
