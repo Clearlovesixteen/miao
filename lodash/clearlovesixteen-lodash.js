@@ -237,6 +237,11 @@ var clearlovesixteen = {
         return arr
      },
      sorteIndex:function(array , value){
-         
-     }
+         for(var i = 0 ; i <  array.length ; i++){
+             if(array[i] < value && value < array[i+1] ){
+                 return i+1
+             }
+         }
+     },
+     
 }
