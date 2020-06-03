@@ -328,7 +328,7 @@ var clearlovesixteen = {
          }
          return arr
      },
-     unzip:function(...array){
+     unzip:function(array){
          var arr = []
          var len = array.length
          for(var i = 0 ; i < len ; i++){
