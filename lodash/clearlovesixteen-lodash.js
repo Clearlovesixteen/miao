@@ -330,7 +330,7 @@ var clearlovesixteen = {
      },
      unzip:function(array){
          var arr = []
-         var len = array[0].length
+         var len = array.length
          for(var i = 0 ; i < len ; i++){
              arr.push([])
          }
@@ -362,7 +362,7 @@ var clearlovesixteen = {
                  if(j in map){
                      map[j]++
                  }else{
-                     map[j] = 0
+                     map[j] = 1
                  }
              }
          }
@@ -370,6 +370,17 @@ var clearlovesixteen = {
              if(map[keys] == 1){
                  arr.push(Number(keys))
              }
+         }
+         return arr
+     },
+     zip:function(...arrays){
+         var arr = []
+         var len = array.length
+         for(var i = 0 ; i < len ; i++){
+             arr.push([])
+         }
+         for(var i = 0 ; i < len ; i++){
+             arr[i].push(arrays[i])
          }
          return arr
      }
