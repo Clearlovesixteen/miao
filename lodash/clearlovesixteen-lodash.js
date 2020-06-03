@@ -338,5 +338,8 @@ var clearlovesixteen = {
              arr[i].push(array[i])
          }
          return arr
+     },
+     without:function(array , ...values ){
+         
      }
 }
