@@ -311,11 +311,9 @@ var clearlovesixteen = {
      union:function(...arrays){
          var arr = []
          for(var i of arrays){
-             for(var j of arrays[i] ){
-                 if(arr.includes(arrays[i][j]) == false){
-                     arr.push(arrays[i][j])
-                 }
-             }
+            if(arr.includes(i) == false){
+                 arr.push(i)
+            }
          }
          return arr
      },
@@ -327,5 +325,6 @@ var clearlovesixteen = {
              }
          }
          return arr
-     }
+     },
+     
 }
