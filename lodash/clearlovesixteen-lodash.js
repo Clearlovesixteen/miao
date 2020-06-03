@@ -25,8 +25,8 @@ var clearlovesixteen = {
         }
         return arr
     },
-    concat:function ( array , [values] ) {
-        
+    concat:function ( array , ...values ) {
+        return array.push(values)
     },
     difference:function ( array , ...values ){
         var arr = []
@@ -243,5 +243,12 @@ var clearlovesixteen = {
              }
          }
      },
-     
+     sortedIndexOf:function(array , value ){
+         for(var i = 0 ; i < array.length ; i++){
+             if(array[i] == value){
+                 return i
+             }
+         }
+         return -1
+     }
 }
