@@ -311,9 +311,9 @@ var clearlovesixteen = {
      union:function(...arrays){
          var arr = []
          for(var i of arrays){
-             for(var j of arrays[i] ){
-                 if(arr.includes(arrays[i][j]) == false){
-                     arr.push(arrays[i][j])
+             for(var j of i ){
+                 if(arr.includes(j) == false){
+                     arr.push(j)
                  }
              }
          }
@@ -330,12 +330,14 @@ var clearlovesixteen = {
      },
      unzip:function(array){
          var arr = []
-         var len = array.length
+         var len = array[0].length
          for(var i = 0 ; i < len ; i++){
              arr.push([])
          }
-         for(var i = 0 ; i < len ; i++){
-             arr[i].push(array[i])
+         for(var i = 0 ; i < array.length ; i++){
+             for(var j = 0 ; j < array[i].length ; i++){
+                 arr[j].push(array[i][j])
+             }
          }
          return arr
      },
