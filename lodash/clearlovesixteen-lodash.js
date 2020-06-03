@@ -269,12 +269,15 @@ var clearlovesixteen = {
          return num
      },
      sortedUniq:function(array){
-         var arr = []
-         for(var i = 0 i < array.length ; i++){
+         var arr = [] ;
+         for(var i = 0 ; i < array.length ; i++){
              if( arr.includes(array[i]) == false){
                  arr.push(array[i])
              }
          }
          return arr
+     },
+     tail:function(array){
+         return array.splice(0,1)
      }
 }
