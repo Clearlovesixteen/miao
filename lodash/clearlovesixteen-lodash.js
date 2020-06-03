@@ -204,7 +204,36 @@ var clearlovesixteen = {
          }
          return arr
      },
-     pullAt:function(){
-         
+     pullAt:function( array , ...indexes ){
+         var arr = [] 
+         for(var i = 0 ; i < array.length ; i++){
+             if(i == indexes-1){
+                 arr.push(array[i])
+             }
+         }
+         return arr
+     },
+     remove:function(array , predicate){
+         var arr = []
+         for(var i = 0 ; i < array.length ; i++){
+             if( predicate(i) ){
+                arr.push( array[i] )
+             }
+         }
+         return arr
+     },
+     reverse:function(array){
+         var arr = []
+         for(var i = array.length-1 ; i >=0 ; i--){
+             arr.push( array[i] )
+         }
+         return arr
+     },
+     slice:function(array , start = 0 , end = arr.length ){
+        var arr = [] ;
+        for(var i = start ; i < end ; i++){
+            arr.psuh( array[i] )
+        }
+        return arr
      }
 }
