@@ -296,15 +296,19 @@ var clearlovesixteen = {
      },
      takeRight:function(array , n = 1){
          var arr = []
-         var len ;
-         if(n > array.length ){
-             len = array.length
-         }else{
-             len = n
+         var len = array.length
+         if(n >= len ){
+             return array
          }
-         for(var i = array.length-1 ; i >= len ; i--){
-             arr.push(array[i])
+         if(n == 0){
+             return arr
+         }
+         for(var i = len - n; i < len ; i++){
+             arr.push( array[i] )
          }
          return arr
+     },
+     union:function(...arrays){
+         
      }
 }
