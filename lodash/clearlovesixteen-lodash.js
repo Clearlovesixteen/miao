@@ -309,6 +309,23 @@ var clearlovesixteen = {
          return arr
      },
      union:function(...arrays){
-         
+         var arr = []
+         for(var i of arrays){
+             for(var j of arrays[i] ){
+                 if(arr.includes(arrays[i][j]) == false){
+                     arr.push(arrays[i][j])
+                 }
+             }
+         }
+         return arr
+     },
+     uniq:function(array){
+         var arr = []
+         for(var i of array){
+             if(arr.includes(i) == false){
+                 arr.push(i)
+             }
+         }
+         return arr
      }
 }
