@@ -235,5 +235,8 @@ var clearlovesixteen = {
             arr.psuh( array[i] )
         }
         return arr
+     },
+     sorteIndex:function(array , value){
+         
      }
 }
