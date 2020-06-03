@@ -328,5 +328,15 @@ var clearlovesixteen = {
          }
          return arr
      }
-     
+     unzip:function(...array){
+         var arr = []
+         var len = array.length
+         for(var i = 0 ; i < len ; i++){
+             arr.push([])
+         }
+         for(var i = 0 ; i < len ; i++){
+             arr[i].push(array[i])
+         }
+         return arr
+     }
 }
