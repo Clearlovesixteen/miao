@@ -278,6 +278,33 @@ var clearlovesixteen = {
          return arr
      },
      tail:function(array){
-         return array.splice(0,1)
+         array.splice(0,1)
+         return array
+     },
+     take:function(array , n = 1){
+         var arr = []
+         var len ;
+         if(n > array.length ){
+             len = array.length
+         }else{
+             len = n
+         }
+         for(var i = 0 ; i < len ; i++){
+             arr.push(array[i])
+         }
+         return arr
+     },
+     takeRight:function(array , n = 1){
+         var arr = []
+         var len ;
+         if(n > array.length ){
+             len = array.length
+         }else{
+             len = n
+         }
+         for(var i = array.length-1 ; i >= len ; i--){
+             arr.push(array[i])
+         }
+         return arr
      }
 }
