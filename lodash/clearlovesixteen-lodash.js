@@ -203,5 +203,8 @@ var clearlovesixteen = {
              }
          }
          return arr
+     },
+     pullAt:function(){
+         
      }
 }
