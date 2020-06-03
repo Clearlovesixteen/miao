@@ -250,5 +250,24 @@ var clearlovesixteen = {
              }
          }
          return -1
-     }
+     },
+     sortedLastIndex:function( array , value ){
+         var num = -1 ;
+         for(var i = 0 ; i < array.length ; i++){
+             if(array[i] == value){
+                 num =  i;
+             }
+         }
+         return num
+     },
+     sortedLastIndexOf:function( array , value ){
+         var num = -1 ;
+         for(var i = 0 ; i < array.length ; i++){
+             if(array[i] == value){
+                 num =  i;
+             }
+         }
+         return num
+     },
+     
 }
