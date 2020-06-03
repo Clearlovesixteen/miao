@@ -327,7 +327,7 @@ var clearlovesixteen = {
              }
          }
          return arr
-     }
+     },
      unzip:function(...array){
          var arr = []
          var len = array.length
@@ -339,7 +339,17 @@ var clearlovesixteen = {
          }
          return arr
      },
-     without:function(array , ...values ){
-         
+     without:function( array , ...values ){
+         var arr= []
+         var map = {}
+         for(var i of values){
+             map[i] = 1
+         }
+         for(var k of array){
+             if( k in map == false){
+                 arr.push(k)
+             }
+         }
+         return arr
      }
 }
