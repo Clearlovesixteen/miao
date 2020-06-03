@@ -353,5 +353,24 @@ var clearlovesixteen = {
              }
          }
          return arr
+     },
+     xor:function(...arrays){
+         var map = {}
+         var arr = []
+         for(var i of arrays){
+             for(var j of i){
+                 if(j in map){
+                     map[j]++
+                 }else{
+                     map[j] = 0
+                 }
+             }
+         }
+         for(var keys in map){
+             if(map[keys] == 1){
+                 arr.push(Number(keys))
+             }
+         }
+         return arr
      }
 }
