@@ -254,11 +254,10 @@ var clearlovesixteen = {
      sortedLastIndex:function( array , value ){
          var num = -1 ;
          for(var i = 0 ; i < array.length ; i++){
-             if(array[i] == value){
-                 num =  i;
+             if(array[i] <= value && value < array[i+1] ){
+                 return i+1
              }
          }
-         return num
      },
      sortedLastIndexOf:function( array , value ){
          var num = -1 ;
@@ -269,5 +268,13 @@ var clearlovesixteen = {
          }
          return num
      },
-     
+     sortedUniq:function(array){
+         var arr = []
+         for(var i = 0 i < array.length ; i++){
+             if( arr.includes(array[i]) == false){
+                 arr.push(array[i])
+             }
+         }
+         return arr
+     }
 }
