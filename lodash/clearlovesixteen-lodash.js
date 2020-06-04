@@ -443,5 +443,7 @@ var clearlovesixteen = {
              return source( object[keys] )
          }
      },
-     
+     eq:function(value , other ){
+         return value == other
+     }
 }
