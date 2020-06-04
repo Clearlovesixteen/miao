@@ -402,11 +402,15 @@ var clearlovesixteen = {
         return map
      },
      forEach:function(collection , iteratee){
-         var arr = []
-         for(var i = 0 ; i < collection.length ; i++){
-             arr.push(iteratee(collection[i]))
+         if(typeof collection == "Array"){
+             for(var i = 0 ; i < collection.length ; i++){
+                 iteratee(collection[i])
+             }
+         }else{
+             for(var keys of collection){
+                 iteratee(keys)
+             }
          }
-         return arr
      },
      
 }
