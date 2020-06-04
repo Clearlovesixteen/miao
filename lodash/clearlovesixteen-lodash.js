@@ -419,7 +419,7 @@ var clearlovesixteen = {
      },
      filter:function(ary , test){
          var arr = []
-         for(var i =  ; i < ary.length ; i++){
+         for(var i =  0 ; i < ary.length ; i++){
              if(test( ary[i] )){
                  arr.push(ary[i])
              }
