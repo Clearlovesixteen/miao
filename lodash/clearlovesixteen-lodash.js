@@ -432,7 +432,9 @@ var clearlovesixteen = {
              var arr = []
              arr.push(value)
              return arr
-         }else{
+         }else if(value.length == 0){
+             return []
+         }else {
              return value
          }
      },
