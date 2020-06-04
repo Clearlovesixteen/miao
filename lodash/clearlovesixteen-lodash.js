@@ -403,16 +403,13 @@ var clearlovesixteen = {
      },
      // 高阶函数
      forEach:function(collection , iteratee){
-         var arr = []
          if(typeof collection == "Array"){
              for(var i = 0 ; i < collection.length ; i++){
-                 var num = iteratee(collection[i])
-                 arr.push(num)
+                  iteratee(collection[i])
              }
          }else{
              for(var keys of collection){
-                 var num = iteratee(keys)
-                 arr.push(num)
+                  iteratee(keys)
              }
          }
          return arr
@@ -431,20 +428,20 @@ var clearlovesixteen = {
          var arr = [] ;
          if( value instanceof  Array){
              return value 
-         }else if(value.length == 0){
+         }else if(arguments.length == 0){
              return []
          }else {
              return arr.push[value]
          }
      },
      conformsTo:function(object , source){
-         for(var keys in object){
+         for(var keys in source){
              return source[keys](object[keys])
          }
      },
      eq:function(value , other ){
          if( isNaN(value) ){
-             return isNaN(value) == isNaN(other)
+             return this.isNaN(value) == this.isNaN(other)
          }else{
              return value == other
          }
