@@ -425,13 +425,12 @@ var clearlovesixteen = {
      },
      // Lang
      castArray:function(value){
-         var arr = [] ;
          if( value instanceof  Array){
              return value 
          }else if(arguments.length == 0){
              return []
          }else {
-             return arr.push[value]
+             return [value]
          }
      },
      conformsTo:function(object , source){
@@ -440,7 +439,7 @@ var clearlovesixteen = {
          }
      },
      eq:function(value , other ){
-         if( isNaN(value) ){
+         if( this.isNaN(value) ){
              return this.isNaN(value) == this.isNaN(other)
          }else{
              return value == other
