@@ -375,7 +375,7 @@ var clearlovesixteen = {
      },
      zip:function(...arrays){
          var arr = []
-         var len = array.length
+         var len = arrays.length
          for(var i = 0 ; i < len ; i++){
              arr.push([])
          }
