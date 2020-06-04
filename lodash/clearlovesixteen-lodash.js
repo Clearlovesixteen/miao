@@ -400,5 +400,10 @@ var clearlovesixteen = {
             map[ props[i] ] = values[i]
         }
         return map
-     }
+     },
+     forEach:function(collection , iteratee){
+         for(var i = 0 ; i < collection.length ; i++){
+             iteratee(collection[i])
+         }
+     })
 }
