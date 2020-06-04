@@ -445,5 +445,8 @@ var clearlovesixteen = {
          }else{
              return value == other
          }
+     },
+     gt:function(value , other){
+         return value > other
      }
 }
