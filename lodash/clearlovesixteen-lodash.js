@@ -457,9 +457,24 @@ var clearlovesixteen = {
          return  value instanceof Array
      },
      isBoolean:function(value){
+         if(value == null){
+             return false
+         }
          return value.__proto__.constructor == Boolean
      },
      isDate:function(value){
          return value instanceof Date
+     },
+     isError:function(value){
+         return value.__proto__.constructor == Error
+     },
+     isLength:function(value){
+         if(typeof value == "Number" && value <=Number.maxValue && value >= 2){
+             return true
+         }
+         return false
+     },
+     isInteger:function(value){
+         return Math.ceil(value) == value
      }
 }
