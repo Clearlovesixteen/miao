@@ -401,6 +401,7 @@ var clearlovesixteen = {
         }
         return map
      },
+     // 高阶函数
      forEach:function(collection , iteratee){
          var arr = []
          if(typeof collection == "Array"){
@@ -415,6 +416,25 @@ var clearlovesixteen = {
              }
          }
          return arr
+     },
+     filter:function(ary , test){
+         var arr = []
+         for(var i =  ; i < ary.length ; i++){
+             if(test( ary[i] )){
+                 arr.push(ary[i])
+             }
+         }
+         return arr
+     },
+     // Lang
+     castArray:function(value){
+         if(typeof value  !== Array){
+             var arr = []
+             arr.push(value)
+             return arr
+         }else{
+             return value
+         }
      },
      
 }
