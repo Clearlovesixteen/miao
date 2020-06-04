@@ -329,16 +329,19 @@ var clearlovesixteen = {
          return arr
      },
      unzip:function(array){
-         var arr = []
-         var len = array.length
-         for(var i = 0 ; i < len ; i++){
-             arr.push([])
-         }
-         for(var i = 0 ; i < array.length ; i++){
-             for(var j = 0 ; j < array[i].length ; i++){
-                 arr[j].push(array[i][j])
+        var arr = [];
+        var flag = true;
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[i].length; j++) {
+                if (flag) {
+                    arr.push([]);
+                    if (j == array[i].length - 1) {
+                        flag = false;
+                    }
+                }
+                arr[j].push(array[i][j]);
+                }
              }
-         }
          return arr
      },
      without:function( array , ...values ){
@@ -373,15 +376,22 @@ var clearlovesixteen = {
          }
          return arr
      },
-     zip:function(...arrays){
-         var arr = []
-         var len = arrays.length
-         for(var i = 0 ; i < len ; i++){
-             arr.push([])
-         }
-         for(var i = 0 ; i < len ; i++){
-             arr[i].push(arrays[i])
-         }
+     zip:function(...array){
+        var arr = [];
+        var num = 0;
+        for (let i of array) {
+            if (i.length > num) {
+                num = i.length;
+            }
+        }
+        for (let i = 0; i < num; i++) {
+            arr.push([]);
+        }
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < num; j++) {
+                arr[j].push(array[i][j]);
+            }
+        }
          return arr
      }
 }
