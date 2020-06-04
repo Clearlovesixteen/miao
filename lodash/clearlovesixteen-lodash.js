@@ -465,5 +465,9 @@ var clearlovesixteen = {
                 return true
              else
                 return false
-     }
+     },
+     isBoolean:function(value){
+         return typeof value == 'boolean'
+     },
+     
 }
