@@ -439,13 +439,19 @@ var clearlovesixteen = {
          }
      },
      eq:function(value , other ){
-         if( this.isNaN(value) ){
+         if( this.isNaN( value) ){
              return this.isNaN(value) == this.isNaN(other)
-         }else{
-             return value == other
          }
+         return value == other
      },
      gt:function(value , other){
          return value > other
-     }
+     },
+     gte:function(value , other){
+         return value >= other
+     },
+     isArguments:function(value){
+         return value.toString() == ["object Arguments"]
+     },
+     
 }
