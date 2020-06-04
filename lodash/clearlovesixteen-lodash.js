@@ -406,7 +406,7 @@ var clearlovesixteen = {
          for(var i = 0 ; i < collection.length ; i++){
              arr.push(iteratee(collection[i]))
          }
-         return
+         return arr
      },
      
 }
