@@ -443,6 +443,10 @@ var clearlovesixteen = {
          }
      },
      eq:function(value , other ){
-         return value == other
+         if( isNaN(value) ){
+             return isNaN(value) == isNaN(other)
+         }else{
+             return value == other
+         }
      }
 }
