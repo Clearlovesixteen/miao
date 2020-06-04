@@ -469,12 +469,15 @@ var clearlovesixteen = {
          return value.__proto__.constructor == Error
      },
      isLength:function(value){
-         if(typeof value == "Number" && value <=Number.maxValue && value >= 2){
+         if(typeof value == "Number" && value <=Number.MAX_VALUE && value >= 2){
              return true
          }
          return false
      },
      isInteger:function(value){
-         return Math.ceil(value) == value
+         if( Math.ceil(value) == value && typeof value == "Number"){
+             return true
+         }
+         return false
      }
 }
