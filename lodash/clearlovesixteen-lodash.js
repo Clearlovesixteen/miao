@@ -428,19 +428,18 @@ var clearlovesixteen = {
      },
      // Lang
      castArray:function(value){
+         var arr = [] ;
          if( value instanceof  Array){
-             var arr = []
-             arr.push(value)
-             return arr
+             return value 
          }else if(value.length == 0){
              return []
          }else {
-             return value
+             return arr.push[value]
          }
      },
      conformsTo:function(object , source){
          for(var keys in object){
-             return source( object[keys] )
+             return source[keys](object[keys])
          }
      },
      eq:function(value , other ){
