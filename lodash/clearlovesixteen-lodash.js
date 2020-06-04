@@ -438,5 +438,10 @@ var clearlovesixteen = {
              return value
          }
      },
+     conformsTo:function(object , source){
+         for(var keys in object){
+             return source( object[keys] )
+         }
+     },
      
 }
