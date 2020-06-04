@@ -453,5 +453,17 @@ var clearlovesixteen = {
      isArguments:function(value){
          return value.toString() == ["object Arguments"]
      },
-     
+     isArray:function(value){
+         return typeof value == Array
+     },
+     isArrayLike:function(value){
+         if(value && typeof value === 'object' &&                
+                isFinite(value.length) &&
+                value.length >= 0 &&                        
+                value.length === Math.floor(o.length) &&    
+                value.length < 4294967296)                  
+                return true
+             else
+                return false
+     }
 }
