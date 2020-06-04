@@ -456,18 +456,10 @@ var clearlovesixteen = {
      isArray:function(value){
          return  value instanceof Array
      },
-     isArrayLike:function(value){
-         if(value && typeof value === 'object' &&                
-                isFinite(value.length) &&
-                value.length >= 0 &&                        
-                value.length === Math.floor(o.length) &&    
-                value.length < 4294967296)                  
-                return true
-             else
-                return false
-     },
      isBoolean:function(value){
-         return typeof value == 'boolean'
+         return value.__proto__.constructor == Boolean
      },
-     
+     isDate:function(value){
+         return value instanceof Date
+     }
 }
