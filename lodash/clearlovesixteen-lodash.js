@@ -454,7 +454,7 @@ var clearlovesixteen = {
          return value.toString() == ["object Arguments"]
      },
      isArray:function(value){
-         return typeof value == Array
+         return  value instanceof Array
      },
      isArrayLike:function(value){
          if(value && typeof value === 'object' &&                
