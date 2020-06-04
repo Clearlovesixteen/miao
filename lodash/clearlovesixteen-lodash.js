@@ -428,7 +428,7 @@ var clearlovesixteen = {
      },
      // Lang
      castArray:function(value){
-         if(typeof value  !== Array){
+         if( value instanceof  Array){
              var arr = []
              arr.push(value)
              return arr
