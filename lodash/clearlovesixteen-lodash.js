@@ -393,5 +393,12 @@ var clearlovesixteen = {
             }
         }
          return arr
+     },
+     zipObject:function( props=[] , values=[] ){
+        var map = {}
+        for(var i = 0 ; i < props.length ; i++){
+            map[ props[i] ] = values[i]
+        }
+        return map
      }
 }
