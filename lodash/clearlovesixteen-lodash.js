@@ -480,5 +480,15 @@ var clearlovesixteen = {
          }
          return false
      },
-     
+     isMatch:function(object , source){
+         if(typeof object  !== "Object"){
+             return false
+         }
+         for(var i in source){
+             return source[i] == object[i]
+         }
+     },
+     isNaN:function(value){
+         return toString(value) == "[object Undefined]"
+     }
 }
