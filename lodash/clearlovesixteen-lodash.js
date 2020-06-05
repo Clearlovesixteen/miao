@@ -442,7 +442,11 @@ var clearlovesixteen = {
          if( this.isNaN( value) ){
              return this.isNaN(value) == this.isNaN(other)
          }
-         return value == other
+         if(value == other){
+             return true
+         }else{
+             return false
+         }
      },
      gt:function(value , other){
          return value > other
@@ -495,7 +499,7 @@ var clearlovesixteen = {
          }
      },
      isNaN:function(value){
-         if( toString(value) == "[object Undefined]" && typeof value == "number" || "object"){
+         if( toString(value) == "[object Undefined]" && typeof value == "number"){
              return true
          }
          return false
