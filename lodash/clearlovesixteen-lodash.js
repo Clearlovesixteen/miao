@@ -510,7 +510,7 @@ var clearlovesixteen = {
          }
          return false
      },
-     isNull;function(value){
+     isNull:function(value){
          return value == null
      },
      isNumber:function(value){
