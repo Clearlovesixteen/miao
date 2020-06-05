@@ -439,8 +439,8 @@ var clearlovesixteen = {
          }
      },
      eq:function(value , other ){
-         if( this.isNaN( value) ){
-             return this.isNaN(value) === this.isNaN(other)
+         if( window.isNaN( value) ){
+             return window.isNaN(value) === window.isNaN(other)
          }
          if(value === other){
              return true
@@ -486,7 +486,7 @@ var clearlovesixteen = {
          return false
      },
      isInteger:function(value){
-         if( Math.ceil(value) == value && typeof value === "number" && this.isNaN(value) == false){
+         if( Math.ceil(value) == value && typeof value === "number" && window.isNaN(value) == false){
              return true
          }
          return false
@@ -500,7 +500,7 @@ var clearlovesixteen = {
          }
      },
      isNaN:function(value){
-         if( toString(value) == "[object Undefined]" && (typeof value == "number" || typeof value == "object") ){
+         if( toString(value) == "[object Undefined]" && value instanceof Number ){
              return true
          }
          return false
@@ -651,5 +651,19 @@ var clearlovesixteen = {
          }
          return num
      },
-     
+     clamp:function(number, lower , upper){
+         if(number < lower){
+             return number - lower
+         }else if(number > upper){
+             return number -upper
+         }else{
+             return 0
+         }
+     },
+     inRange:function (number, start = 0, end){
+         var num = 0 ;
+         if(start > end){
+             num = start
+         }              
+     }
 }
