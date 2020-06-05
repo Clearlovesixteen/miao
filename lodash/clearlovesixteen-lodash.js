@@ -499,7 +499,7 @@ var clearlovesixteen = {
          }
      },
      isNaN:function(value){
-         if( toString(value) == "[object Undefined]" && typeof value == "number"){
+         if( toString(value) === "[object Undefined]" && (typeof value == "number" || typeof value == "object") ){
              return true
          }
          return false
