@@ -592,11 +592,11 @@ var clearlovesixteen = {
              return undefined
          }
          var num = array[0]; 
-         for(let i of array)[
+         for(let i of array){
              if(num < i ){
                  num = i
              }
-         ]
+         }
          return num
      },
      maxBy:function(array , iteratee){
@@ -609,5 +609,12 @@ var clearlovesixteen = {
          }
          return max
      },
-     
+     mean:function(array){
+         var add = 0
+         var len = array.length ;
+         for(var i of array){
+             add+=i
+         }
+         return add
+     }
 }
