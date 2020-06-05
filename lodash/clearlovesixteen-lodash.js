@@ -465,6 +465,12 @@ var clearlovesixteen = {
      isDate:function(value){
          return value instanceof Date
      },
+     isElement:function(value){
+         if(value == null){
+             return false
+         }
+         return value.__proto__.constructor == HTMLBodyElement
+     },
      isError:function(value){
          return value.__proto__.constructor == Error
      },
@@ -484,7 +490,7 @@ var clearlovesixteen = {
          if(typeof object  !== "Object"){
              return false
          }
-         for(var i in source){
+         for(var i of source){
              return source[i] == object[i]
          }
      },
