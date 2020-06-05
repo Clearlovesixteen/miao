@@ -563,12 +563,20 @@ var clearlovesixteen = {
      toNumber:function(value){
          return Number(value)
      },
-     toString:function(value){
-         if(value == null || value == undefined){
-             return  ""
-         }
-         for(var i in value){
-             
-         }
-     }
+     add:function(augend , addend ){
+         return augend + addend
+     },
+     ceil:function(number , predicate = 0){
+            number = number*10**predicate
+            var num = Math.floor(number)
+            if(number - num > 0){
+                return num*10**-predicate+1*10**-predicate
+            }else{
+                return num*10**-predicate
+            }
+     },
+     divide:function(dividend , divisor){
+         return dividend / divisor
+     },
+     
 }
