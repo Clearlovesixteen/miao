@@ -578,5 +578,13 @@ var clearlovesixteen = {
      divide:function(dividend , divisor){
          return dividend / divisor
      },
-     
+     floor:function(number , precision = 0){
+         number = number*10**predicate
+         var num = Math.ceil(number)
+         if(number - num > 0){
+             return (num-1)*10**-predicate
+         }else{
+             return num*10**-predicate
+         }
+     }
 }
