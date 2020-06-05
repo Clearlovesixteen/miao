@@ -504,5 +504,10 @@ var clearlovesixteen = {
          }
          return false
      },
-     
+     isNil:function(value){
+         if(typeof value == "undefined" || value == null){
+             return true
+         }
+         return false
+     }
 }
