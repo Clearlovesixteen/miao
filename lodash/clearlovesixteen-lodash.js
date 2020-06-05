@@ -581,7 +581,7 @@ var clearlovesixteen = {
      floor:function(number , precision = 0){
          number = number*10**precision
          var num = Math.ceil(number)
-         if(number - num > 0){
+         if(num - number > 0){
              return (num-1)*10**-precision
          }else{
              return num*10**-precision
@@ -599,7 +599,7 @@ var clearlovesixteen = {
          }
          return num
      },
-     maxBy:function(array , iteratee){
+     maxBy:function(array , iteratee=_.identity){
          var max = 0
          for(var i = 0 ; i < array.length ; i++){
             var num = iteratee( array[i] )
@@ -615,6 +615,7 @@ var clearlovesixteen = {
          for(var i of array){
              add+=i
          }
-         return add
-     }
+         return add/len
+     },
+     
 }
