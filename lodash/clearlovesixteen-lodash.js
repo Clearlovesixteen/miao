@@ -447,6 +447,7 @@ var clearlovesixteen = {
          }else{
              return false
          }
+         
      },
      gt:function(value , other){
          return value > other
@@ -559,5 +560,15 @@ var clearlovesixteen = {
          }
          return Math.floor(Number(value))
      },
-     
+     toNumber:function(value){
+         return Number(value)
+     },
+     toString:function(value){
+         if(value == null || value == undefined){
+             return  ""
+         }
+         for(var i in value){
+             
+         }
+     }
 }
