@@ -524,5 +524,17 @@ var clearlovesixteen = {
      },
      isUnderfined:function(value){
          return typeof value == "undefined"
-     }
+     },
+     It:function(value , other){
+         return value < other
+     },
+     Ite:function(value , other){
+         return value <= other
+     },
+     // toArray:function(value){
+     //     var arr = []
+     //     for(var i  of value ){
+     //         arr.push()
+     //     }
+     // }
 }
