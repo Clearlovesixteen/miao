@@ -517,10 +517,12 @@ var clearlovesixteen = {
          return typeof value == "number"
      },
      isObject:function(value){
-         if(value == null){
-             return false
-         }
-         return typeof value == "object"
+        return value instanceof object
      },
-     
+     isString:function(value){
+         return typeof value == "string"
+     },
+     isUnderfined:function(value){
+         return typeof value == "undefined"
+     }
 }
