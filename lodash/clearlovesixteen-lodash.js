@@ -486,7 +486,7 @@ var clearlovesixteen = {
          return false
      },
      isInteger:function(value){
-         if( Math.ceil(value) == value && typeof value === "number" && isNaN(value) == false){
+         if( Math.ceil(value) == value && typeof value === "number" && this.isNaN(value) == false){
              return true
          }
          return false
@@ -579,12 +579,35 @@ var clearlovesixteen = {
          return dividend / divisor
      },
      floor:function(number , precision = 0){
-         number = number*10**predicate
+         number = number*10**precision
          var num = Math.ceil(number)
          if(number - num > 0){
-             return (num-1)*10**-predicate
+             return (num-1)*10**-precision
          }else{
-             return num*10**-predicate
+             return num*10**-precision
          }
-     }
+     },
+     max:function(array){
+         if(array.length == 0){
+             return undefined
+         }
+         var num = array[0]; 
+         for(let i of array)[
+             if(num < i ){
+                 num = i
+             }
+         ]
+         return num
+     },
+     maxBy:function(array , iteratee){
+         var max = 0
+         for(var i = 0 ; i < array.length ; i++){
+            var num = iteratee( array[i] )
+            if(num > max ){
+                max = array[i]
+            }
+         }
+         return max
+     },
+     
 }
