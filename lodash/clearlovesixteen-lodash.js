@@ -512,5 +512,14 @@ var clearlovesixteen = {
      },
      isNull;function(value){
          return value == null
+     },
+     isNumber:function(value){
+         return typeof value == "number"
+     },
+     isobject:function(value){
+         if(value == null){
+             return false
+         }
+         return typeof value == "object"
      }
 }
