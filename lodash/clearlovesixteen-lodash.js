@@ -490,11 +490,15 @@ var clearlovesixteen = {
          if(typeof object  !== "Object"){
              return false
          }
-         for(var i of source){
+         for(var i in  source){
              return source[i] == object[i]
          }
      },
      isNaN:function(value){
-         if( toString(value) == "[object Undefined]" && typeof value == "number")
-     }
+         if( toString(value) == "[object Undefined]" && typeof value == "number"){
+             return true
+         }
+         return false
+     },
+     
 }
