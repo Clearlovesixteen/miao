@@ -521,7 +521,7 @@ var clearlovesixteen = {
      },
      isRegExp:function(value){
          return value.__proto__.constructor == RegExp
-     }
+     },
      isString:function(value){
          return typeof value == "string"
      },
@@ -540,5 +540,6 @@ var clearlovesixteen = {
              arr.push(value[i])
          }
          return arr
-     }
+     },
+     
 }
