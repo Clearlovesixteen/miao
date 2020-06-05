@@ -519,6 +519,9 @@ var clearlovesixteen = {
      isObject:function(value){
         return value instanceof object
      },
+     isRegExp:function(value){
+         return value.__proto__.constructor == RegExp
+     }
      isString:function(value){
          return typeof value == "string"
      },
@@ -531,10 +534,11 @@ var clearlovesixteen = {
      Ite:function(value , other){
          return value <= other
      },
-     // toArray:function(value){
-     //     var arr = []
-     //     for(var i  of value ){
-     //         arr.push()
-     //     }
-     // }
+     toArray:function(value){
+         var arr = []
+         for(var i  in value ){
+             arr.push(value[i])
+         }
+         return arr
+     }
 }
