@@ -636,7 +636,7 @@ var clearlovesixteen = {
          number = number*10**precision
          var num = Math.floor(number)
          if(num - number > 0.5){
-             return num+1*10**-precision
+             return num*10**-precision+1*10**-precision
          }else{
              return num*10**-precision
          }
