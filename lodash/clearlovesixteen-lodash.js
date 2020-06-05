@@ -517,7 +517,7 @@ var clearlovesixteen = {
          return typeof value == "number"
      },
      isObject:function(value){
-        return value instanceof object
+        return value instanceof Object
      },
      isRegExp:function(value){
          return value.__proto__.constructor == RegExp
@@ -540,6 +540,24 @@ var clearlovesixteen = {
              arr.push(value[i])
          }
          return arr
+     },
+     toFinite:function(value){
+         if(value == Infinity){
+             return Number.MAX_VALUE
+         }
+         if(value == -Infinity){
+             return Number.MIN_VALUE
+         }
+         return Number(value)
+     },
+     toInteger:function(value){
+         if(value == Infinity){
+             return Number.MAX_VALUE
+         }
+         if(value == -Infinity){
+             return Number.MIN_VALUE
+         }
+         return Math.floor(Number(value))
      },
      
 }
