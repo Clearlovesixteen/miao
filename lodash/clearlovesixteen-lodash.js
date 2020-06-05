@@ -442,7 +442,7 @@ var clearlovesixteen = {
          if( this.isNaN( value) ){
              return this.isNaN(value) == this.isNaN(other)
          }
-         if(value == other){
+         if(value === other){
              return true
          }else{
              return false
@@ -511,7 +511,7 @@ var clearlovesixteen = {
          return false
      },
      isNull:function(value){
-         return value == null
+         return value === null
      },
      isNumber:function(value){
          return typeof value == "number"
