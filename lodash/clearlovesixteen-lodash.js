@@ -485,7 +485,7 @@ var clearlovesixteen = {
          return false
      },
      isInteger:function(value){
-         if( Math.ceil(value) == value && typeof value == "number" && isNaN(value) == false){
+         if( Math.ceil(value) == value && typeof value === "number" && isNaN(value) === false){
              return true
          }
          return false
@@ -521,5 +521,6 @@ var clearlovesixteen = {
              return false
          }
          return typeof value == "object"
-     }
+     },
+     
 }
