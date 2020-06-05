@@ -440,7 +440,7 @@ var clearlovesixteen = {
      },
      eq:function(value , other ){
          if( this.isNaN( value) ){
-             return this.isNaN(value) == this.isNaN(other)
+             return this.isNaN(value) === this.isNaN(other)
          }
          if(value === other){
              return true
