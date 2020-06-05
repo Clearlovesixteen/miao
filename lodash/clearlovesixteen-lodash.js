@@ -617,5 +617,39 @@ var clearlovesixteen = {
          }
          return add/len
      },
+     min:function(array){
+         if(array.length == 0){
+             return undefined
+         }
+         var num = array[0]; 
+         for(let i of array){
+             if(num > i ){
+                 num = i
+             }
+         }
+         return num
+     },
+     multiply:function(multiplier, multiplicand){
+         return multiplier*multiplicand
+     },
+     round:function(number, precision = 0){
+         number = number*10**precision
+         var num = Math.floor(number)
+         if(num - number > 0.5){
+             return num+1*10**-precision
+         }else{
+             return num*10**-precision
+         }
+     },
+     subtract:function(minuend, subtrahend){
+         return minuend-subtrahend
+     },
+     sum:function(array){
+         var num = 0
+         for(var i of array){
+             num+=i
+         }
+         return num
+     },
      
 }
