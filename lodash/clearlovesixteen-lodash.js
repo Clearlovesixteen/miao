@@ -509,5 +509,8 @@ var clearlovesixteen = {
              return true
          }
          return false
+     },
+     isNull;function(value){
+         return value == null
      }
 }
