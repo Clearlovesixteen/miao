@@ -413,7 +413,7 @@ var clearlovesixteen = {
      // 高阶函数
      ary:function(func , n = func.length ){
          return function(...args){
-             return func(...args)
+             return func(...args.silce(0,n))
          }
      },
      forEach:function(collection , iteratee){
@@ -524,7 +524,7 @@ var clearlovesixteen = {
          }
      },
      isNaN:function(value){
-         if( toString(value) == "[object Undefined]" && value instanceof Number ){
+         if( toString(value) == "[object Undefined]" &&  value instanceof Number){
              return true
          }
          return false
@@ -622,16 +622,6 @@ var clearlovesixteen = {
              }
          }
          return num
-     },
-     maxBy:function(array , iteratee=_.identity){
-         var max = 0
-         for(var i = 0 ; i < array.length ; i++){
-            var num = iteratee( array[i] )
-            if(num > max ){
-                max = array[i]
-            }
-         }
-         return max
      },
      mean:function(array){
          var add = 0
