@@ -402,6 +402,11 @@ var clearlovesixteen = {
         return map
      },
      // 高阶函数
+     ary:function(func , n = func.length ){
+         return function(...args){
+             return func(...args)
+         }
+     },
      forEach:function(collection , iteratee){
          if(typeof collection == "Array"){
              for(var i = 0 ; i < collection.length ; i++){
@@ -423,6 +428,16 @@ var clearlovesixteen = {
          }
          return arr
      },
+     negate:function(func){
+       return function(...args){
+           return !func(...args)
+       }  
+     },
+     unary:function(func){
+         return function(arg){
+             return func(arg)
+         }
+     },
      // Lang
      castArray:function(value){
          if( value instanceof  Array){
@@ -439,8 +454,8 @@ var clearlovesixteen = {
          }
      },
      eq:function(value , other ){
-         if( window.isNaN( value) ){
-             return window.isNaN(value) === window.isNaN(other)
+         if( Number.isNaN( value) ){
+             return Number.isNaN(value) === Number.isNaN(other)
          }
          if(value === other){
              return true
@@ -480,13 +495,13 @@ var clearlovesixteen = {
          return value.__proto__.constructor == Error
      },
      isLength:function(value){
-         if(typeof value == "number" && value <=Number.MAX_VALUE && value >= 2){
+         if(typeof value == "number" && value <= Number.MAX_VALUE && value >= 2){
              return true
          }
          return false
      },
      isInteger:function(value){
-         if( Math.ceil(value) == value && typeof value === "number" && window.isNaN(value) == false){
+         if( Math.ceil(value) == value && typeof value === "number" && Number.isNaN(value) == false){
              return true
          }
          return false
@@ -664,6 +679,8 @@ var clearlovesixteen = {
          var num = 0 ;
          if(start > end){
              num = start
-         }              
-     }
+         } 
+         return number >= start && number <= end
+     },
+     
 }
