@@ -679,6 +679,8 @@ var clearlovesixteen = {
          var num = 0 ;
          if(start > end){
              num = start
+             start = end ;
+             end = num
          } 
          return number >= start && number <= end
      },
