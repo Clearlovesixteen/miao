@@ -26,7 +26,16 @@ var clearlovesixteen = {
         return arr
     },
     concat:function ( array , ...values ) {
-        return array.push(values)
+        var arr = []
+        for(var i  of array){
+            arr.push(i)
+        }
+        for(var j of values){
+            for(var o of j){
+                arr.push( o )
+            }
+        }
+        return arr
     },
     difference:function ( array , ...values ){
         var arr = []
@@ -684,5 +693,5 @@ var clearlovesixteen = {
          } 
          return number >= start && number <= end
      },
-     
+     // 字符串
 }
